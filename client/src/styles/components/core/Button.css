@@ -1,0 +1,23 @@
+button {
+  border-radius: 15px;
+  font-size: 18px;
+  border: none;
+}
+
+.primary-button {
+  background-color: var(--light-primary);
+  color: var(--primary);
+}
+
+.primary-button:hover {
+  background-color: white;
+}
+
+.secondary-button {
+  background-color: var(--light-secondary);
+  color: var(--secondary);
+}
+
+.secondary-button:hover {
+  background-color: white;
+}
