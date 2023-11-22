@@ -1,0 +1,3188 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20232.23.0805.0415                               -->
+<workbook original-version='18.1' source-build='2023.2.1 (20232.23.0805.0415)' source-platform='win' version='18.1' xml:base='https://vizhub' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <CascadingFilters />
+    <CascadingFiltersHamburgerUI />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location derived-from='https://public.tableau.com/workbooks/DataScienceJobListingMap?rev=1.1' id='DataScienceJobListingMap' path='/workbooks' revision='1.2' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Ratio' datatype='real' name='[Parameter 1]' param-domain-type='any' role='measure' type='quantitative' value='6.'>
+        <calculation class='tableau' formula='6.' />
+      </column>
+    </datasource>
+    <datasource caption='Data_Scientist_Job_Listings_Dat (Data_Scientist_Job_Listings_Data_LatLong)' inline='true' name='federated.1oc7p641vae6m51bwai7w0jixmtq' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Data_Scientist_Job_Listings_Data_LatLong' name='excel-direct.0k47k0m1uw8a1j16km01x0eg7mgq'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/james.WPROOF/Downloads/Data_Scientist_Job_Listings_Data_LatLong.xlsx' interpretationMode='0' server='' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='excel-direct.0k47k0m1uw8a1j16km01x0eg7mgq' name='Data_Scientist_Job_Listings_Dat' table='[Data_Scientist_Job_Listings_Dat$]' type='table'>
+          <columns gridOrigin='A1:AA10001:no:A1:AA10001:0' header='yes' outcome='2'>
+            <column datatype='integer' name='id_number' ordinal='0' />
+            <column datatype='integer' name='source_id' ordinal='1' />
+            <column datatype='string' name='original_record_id' ordinal='2' />
+            <column datatype='string' name='original_job_posting_site' ordinal='3' />
+            <column datatype='string' name='original_job_title' ordinal='4' />
+            <column datatype='string' name='cleansed_job_title' ordinal='5' />
+            <column datatype='string' name='original_company_name' ordinal='6' />
+            <column datatype='string' name='original_industry' ordinal='7' />
+            <column datatype='string' name='City' ordinal='8' />
+            <column datatype='string' name='State' ordinal='9' />
+            <column datatype='string' name='Country' ordinal='10' />
+            <column datatype='string' name='original_salary' ordinal='11' />
+            <column datatype='integer' name='cleansed_salary_min' ordinal='12' />
+            <column datatype='integer' name='cleansed_salary_max' ordinal='13' />
+            <column datatype='real' name='cleansed_salary_avg' ordinal='14' />
+            <column datatype='string' name='original_job_type' ordinal='15' />
+            <column datatype='string' name='original_work_type' ordinal='16' />
+            <column datatype='string' name='original_job_description1' ordinal='17' />
+            <column datatype='string' name='original_job_description2' ordinal='18' />
+            <column datatype='date' name='posting_date' ordinal='19' />
+            <column datatype='string' name='cleansed_job_type' ordinal='20' />
+            <column datatype='integer' name='isContract' ordinal='21' />
+            <column datatype='integer' name='isInternship' ordinal='22' />
+            <column datatype='integer' name='isEntryLevel' ordinal='23' />
+            <column datatype='integer' name='isMidSeniorLevel' ordinal='24' />
+            <column datatype='real' name='Latitude' ordinal='25' />
+            <column datatype='real' name='Longitude' ordinal='26' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='excel-direct.0k47k0m1uw8a1j16km01x0eg7mgq' name='Data_Scientist_Job_Listings_Dat' table='[Data_Scientist_Job_Listings_Dat$]' type='table'>
+          <columns gridOrigin='A1:AA10001:no:A1:AA10001:0' header='yes' outcome='2'>
+            <column datatype='integer' name='id_number' ordinal='0' />
+            <column datatype='integer' name='source_id' ordinal='1' />
+            <column datatype='string' name='original_record_id' ordinal='2' />
+            <column datatype='string' name='original_job_posting_site' ordinal='3' />
+            <column datatype='string' name='original_job_title' ordinal='4' />
+            <column datatype='string' name='cleansed_job_title' ordinal='5' />
+            <column datatype='string' name='original_company_name' ordinal='6' />
+            <column datatype='string' name='original_industry' ordinal='7' />
+            <column datatype='string' name='City' ordinal='8' />
+            <column datatype='string' name='State' ordinal='9' />
+            <column datatype='string' name='Country' ordinal='10' />
+            <column datatype='string' name='original_salary' ordinal='11' />
+            <column datatype='integer' name='cleansed_salary_min' ordinal='12' />
+            <column datatype='integer' name='cleansed_salary_max' ordinal='13' />
+            <column datatype='real' name='cleansed_salary_avg' ordinal='14' />
+            <column datatype='string' name='original_job_type' ordinal='15' />
+            <column datatype='string' name='original_work_type' ordinal='16' />
+            <column datatype='string' name='original_job_description1' ordinal='17' />
+            <column datatype='string' name='original_job_description2' ordinal='18' />
+            <column datatype='date' name='posting_date' ordinal='19' />
+            <column datatype='string' name='cleansed_job_type' ordinal='20' />
+            <column datatype='integer' name='isContract' ordinal='21' />
+            <column datatype='integer' name='isInternship' ordinal='22' />
+            <column datatype='integer' name='isEntryLevel' ordinal='23' />
+            <column datatype='integer' name='isMidSeniorLevel' ordinal='24' />
+            <column datatype='real' name='Latitude' ordinal='25' />
+            <column datatype='real' name='Longitude' ordinal='26' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Data_Scientist_Job_Listings_Dat]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:AA10001:no:A1:AA10001:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id_number</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id_number]</local-name>
+            <parent-name>[Data_Scientist_Job_Listings_Dat]</parent-name>
+            <remote-alias>id_number</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>source_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[source_id]</local-name>
+            <parent-name>[Data_Scientist_Job_Listings_Dat]</parent-name>
+            <remote-alias>source_id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>original_record_id</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[original_record_id]</local-name>
+            <parent-name>[Data_Scientist_Job_Listings_Dat]</parent-name>
+            <remote-alias>original_record_id</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>original_job_posting_site</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[original_job_posting_site]</local-name>
+            <parent-name>[Data_Scientist_Job_Listings_Dat]</parent-name>
+            <remote-alias>original_job_posting_site</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>original_job_title</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[original_job_title]</local-name>
+            <parent-name>[Data_Scientist_Job_Listings_Dat]</parent-name>
+            <remote-alias>original_job_title</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cleansed_job_title</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[cleansed_job_title]</local-name>
+            <parent-name>[Data_Scientist_Job_Listings_Dat]</parent-name>
+            <remote-alias>cleansed_job_title</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>original_company_name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[original_company_name]</local-name>
+            <parent-name>[Data_Scientist_Job_Listings_Dat]</parent-name>
+            <remote-alias>original_company_name</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>original_industry</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[original_industry]</local-name>
+            <parent-name>[Data_Scientist_Job_Listings_Dat]</parent-name>
+            <remote-alias>original_industry</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>City</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[City]</local-name>
+            <parent-name>[Data_Scientist_Job_Listings_Dat]</parent-name>
+            <remote-alias>City</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[State]</local-name>
+            <parent-name>[Data_Scientist_Job_Listings_Dat]</parent-name>
+            <remote-alias>State</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Country]</local-name>
+            <parent-name>[Data_Scientist_Job_Listings_Dat]</parent-name>
+            <remote-alias>Country</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>original_salary</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[original_salary]</local-name>
+            <parent-name>[Data_Scientist_Job_Listings_Dat]</parent-name>
+            <remote-alias>original_salary</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cleansed_salary_min</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[cleansed_salary_min]</local-name>
+            <parent-name>[Data_Scientist_Job_Listings_Dat]</parent-name>
+            <remote-alias>cleansed_salary_min</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cleansed_salary_max</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[cleansed_salary_max]</local-name>
+            <parent-name>[Data_Scientist_Job_Listings_Dat]</parent-name>
+            <remote-alias>cleansed_salary_max</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cleansed_salary_avg</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[cleansed_salary_avg]</local-name>
+            <parent-name>[Data_Scientist_Job_Listings_Dat]</parent-name>
+            <remote-alias>cleansed_salary_avg</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>original_job_type</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[original_job_type]</local-name>
+            <parent-name>[Data_Scientist_Job_Listings_Dat]</parent-name>
+            <remote-alias>original_job_type</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>original_work_type</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[original_work_type]</local-name>
+            <parent-name>[Data_Scientist_Job_Listings_Dat]</parent-name>
+            <remote-alias>original_work_type</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>original_job_description1</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[original_job_description1]</local-name>
+            <parent-name>[Data_Scientist_Job_Listings_Dat]</parent-name>
+            <remote-alias>original_job_description1</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>original_job_description2</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[original_job_description2]</local-name>
+            <parent-name>[Data_Scientist_Job_Listings_Dat]</parent-name>
+            <remote-alias>original_job_description2</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>posting_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[posting_date]</local-name>
+            <parent-name>[Data_Scientist_Job_Listings_Dat]</parent-name>
+            <remote-alias>posting_date</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cleansed_job_type</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[cleansed_job_type]</local-name>
+            <parent-name>[Data_Scientist_Job_Listings_Dat]</parent-name>
+            <remote-alias>cleansed_job_type</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>isContract</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[isContract]</local-name>
+            <parent-name>[Data_Scientist_Job_Listings_Dat]</parent-name>
+            <remote-alias>isContract</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>isInternship</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[isInternship]</local-name>
+            <parent-name>[Data_Scientist_Job_Listings_Dat]</parent-name>
+            <remote-alias>isInternship</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>isEntryLevel</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[isEntryLevel]</local-name>
+            <parent-name>[Data_Scientist_Job_Listings_Dat]</parent-name>
+            <remote-alias>isEntryLevel</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>isMidSeniorLevel</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[isMidSeniorLevel]</local-name>
+            <parent-name>[Data_Scientist_Job_Listings_Dat]</parent-name>
+            <remote-alias>isMidSeniorLevel</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Latitude]</local-name>
+            <parent-name>[Data_Scientist_Job_Listings_Dat]</parent-name>
+            <remote-alias>Latitude</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Longitude]</local-name>
+            <parent-name>[Data_Scientist_Job_Listings_Dat]</parent-name>
+            <remote-alias>Longitude</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column aggregation='Avg' caption='Round Latitude' datatype='real' name='[Calculation_806707300506722304]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative'>
+        <calculation class='tableau' formula='round([Latitude])' />
+      </column>
+      <column aggregation='Avg' caption='Round Longitude' datatype='real' name='[Calculation_806707300506869761]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative'>
+        <calculation class='tableau' formula='Round([Longitude])' />
+      </column>
+      <column aggregation='Avg' caption='HexLong' datatype='real' name='[Calculation_806707300507402242]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative'>
+        <calculation class='tableau' formula='HEXBINX([Longitude]*[Parameters].[Parameter 1],[Latitude]*[Parameters].[Parameter 1])' />
+      </column>
+      <column aggregation='Avg' caption='HexLat' datatype='real' name='[Calculation_806707300507676675]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative'>
+        <calculation class='tableau' formula='HexBinY([Longitude]*[Parameters].[Parameter 1],[Latitude]*[Parameters].[Parameter 1])' />
+      </column>
+      <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column aggregation='Avg' datatype='real' name='[Latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' datatype='real' name='[Longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='Data_Scientist_Job_Listings_Dat' datatype='table' name='[__tableau_internal_object_id__].[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]' role='measure' type='quantitative' />
+      <column caption='Cleansed Job Title' datatype='string' name='[cleansed_job_title]' role='dimension' type='nominal' />
+      <column caption='Cleansed Job Type' datatype='string' name='[cleansed_job_type]' role='dimension' type='nominal' />
+      <column caption='Cleansed Salary Avg' datatype='real' name='[cleansed_salary_avg]' role='measure' type='quantitative' />
+      <column caption='Cleansed Salary Max' datatype='integer' name='[cleansed_salary_max]' role='measure' type='quantitative' />
+      <column caption='Cleansed Salary Min' datatype='integer' name='[cleansed_salary_min]' role='measure' type='quantitative' />
+      <column caption='Id Number' datatype='integer' name='[id_number]' role='dimension' type='ordinal' />
+      <column caption='Is Contract' datatype='integer' name='[isContract]' role='measure' type='quantitative' />
+      <column caption='Is Entry Level' datatype='integer' name='[isEntryLevel]' role='measure' type='quantitative' />
+      <column caption='Is Internship' datatype='integer' name='[isInternship]' role='measure' type='quantitative' />
+      <column caption='Is Mid Senior Level' datatype='integer' name='[isMidSeniorLevel]' role='measure' type='quantitative' />
+      <column caption='Original Company Name' datatype='string' name='[original_company_name]' role='dimension' type='nominal' />
+      <column caption='Original Industry' datatype='string' name='[original_industry]' role='dimension' type='nominal' />
+      <column caption='Original Job Description1' datatype='string' name='[original_job_description1]' role='dimension' type='nominal' />
+      <column caption='Original Job Description2' datatype='string' name='[original_job_description2]' role='dimension' type='nominal' />
+      <column caption='Original Job Posting Site' datatype='string' name='[original_job_posting_site]' role='dimension' type='nominal' />
+      <column caption='Original Job Title' datatype='string' name='[original_job_title]' role='dimension' type='nominal' />
+      <column caption='Original Job Type' datatype='string' name='[original_job_type]' role='dimension' type='nominal' />
+      <column caption='Original Record Id' datatype='string' name='[original_record_id]' role='dimension' type='nominal' />
+      <column caption='Original Salary' datatype='string' name='[original_salary]' role='dimension' type='nominal' />
+      <column caption='Original Work Type' datatype='string' name='[original_work_type]' role='dimension' type='nominal' />
+      <column caption='Posting Date' datatype='date' name='[posting_date]' role='dimension' type='ordinal' />
+      <column caption='Source Id' datatype='integer' name='[source_id]' role='dimension' type='ordinal' />
+      <column-instance column='[City]' derivation='None' name='[none:City:nk]' pivot='key' type='nominal' />
+      <drill-paths>
+        <drill-path name='Country, State, City'>
+          <field>[Country]</field>
+          <field>[State]</field>
+          <field>[City]</field>
+        </drill-path>
+      </drill-paths>
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/JAMES~1.WPR/AppData/Local/Temp/TableauTemp/#TableauTemp_0b04iie096koag16420xj1jxk0td.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='10/31/2023 12:13:16 AM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>id_number</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[id_number]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>id_number</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Data_Scientist_Job_Listings_Dat</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>19868</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>source_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[source_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>source_id</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Data_Scientist_Job_Listings_Dat</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>original_record_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[original_record_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>original_record_id</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Data_Scientist_Job_Listings_Dat</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4847</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>original_job_posting_site</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[original_job_posting_site]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>original_job_posting_site</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Data_Scientist_Job_Listings_Dat</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>original_job_title</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[original_job_title]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>original_job_title</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Data_Scientist_Job_Listings_Dat</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3439</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cleansed_job_title</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[cleansed_job_title]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cleansed_job_title</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Data_Scientist_Job_Listings_Dat</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>original_company_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[original_company_name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>original_company_name</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Data_Scientist_Job_Listings_Dat</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3826</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>original_industry</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[original_industry]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>original_industry</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Data_Scientist_Job_Listings_Dat</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>62</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>City</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[City]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>City</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Data_Scientist_Job_Listings_Dat</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>405</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>State</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[State]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>State</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Data_Scientist_Job_Listings_Dat</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>84</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Country</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Country]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Country</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Data_Scientist_Job_Listings_Dat</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>original_salary</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[original_salary]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>original_salary</remote-alias>
+              <ordinal>11</ordinal>
+              <family>Data_Scientist_Job_Listings_Dat</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>880</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cleansed_salary_min</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[cleansed_salary_min]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cleansed_salary_min</remote-alias>
+              <ordinal>12</ordinal>
+              <family>Data_Scientist_Job_Listings_Dat</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>493</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cleansed_salary_max</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[cleansed_salary_max]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cleansed_salary_max</remote-alias>
+              <ordinal>13</ordinal>
+              <family>Data_Scientist_Job_Listings_Dat</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>396</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cleansed_salary_avg</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[cleansed_salary_avg]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cleansed_salary_avg</remote-alias>
+              <ordinal>14</ordinal>
+              <family>Data_Scientist_Job_Listings_Dat</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>718</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>original_job_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[original_job_type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>original_job_type</remote-alias>
+              <ordinal>15</ordinal>
+              <family>Data_Scientist_Job_Listings_Dat</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>22</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>original_work_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[original_work_type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>original_work_type</remote-alias>
+              <ordinal>16</ordinal>
+              <family>Data_Scientist_Job_Listings_Dat</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>original_job_description1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[original_job_description1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>original_job_description1</remote-alias>
+              <ordinal>17</ordinal>
+              <family>Data_Scientist_Job_Listings_Dat</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7800</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>original_job_description2</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[original_job_description2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>original_job_description2</remote-alias>
+              <ordinal>18</ordinal>
+              <family>Data_Scientist_Job_Listings_Dat</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2066</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>posting_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[posting_date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>posting_date</remote-alias>
+              <ordinal>19</ordinal>
+              <family>Data_Scientist_Job_Listings_Dat</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>377</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cleansed_job_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[cleansed_job_type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cleansed_job_type</remote-alias>
+              <ordinal>20</ordinal>
+              <family>Data_Scientist_Job_Listings_Dat</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>isContract</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[isContract]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>isContract</remote-alias>
+              <ordinal>21</ordinal>
+              <family>Data_Scientist_Job_Listings_Dat</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>isInternship</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[isInternship]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>isInternship</remote-alias>
+              <ordinal>22</ordinal>
+              <family>Data_Scientist_Job_Listings_Dat</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>isEntryLevel</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[isEntryLevel]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>isEntryLevel</remote-alias>
+              <ordinal>23</ordinal>
+              <family>Data_Scientist_Job_Listings_Dat</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>isMidSeniorLevel</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[isMidSeniorLevel]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>isMidSeniorLevel</remote-alias>
+              <ordinal>24</ordinal>
+              <family>Data_Scientist_Job_Listings_Dat</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Latitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Latitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Latitude</remote-alias>
+              <ordinal>25</ordinal>
+              <family>Data_Scientist_Job_Listings_Dat</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>175</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Longitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Longitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Longitude</remote-alias>
+              <ordinal>26</ordinal>
+              <family>Data_Scientist_Job_Listings_Dat</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>175</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:City:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Ann Arbor&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Annapolis Junction&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Bloomington&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Boise&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Carle Place&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Clemson&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Dearborn&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Elk Grove&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Faridabad&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Ghaziabad&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Hampton&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Hartford&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Kanpur&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Lakewood&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Littleton&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Marietta&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Minnetonka&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Northfield&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Parsippany&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Pennington&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Raleigh-Durham&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Reston&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Rosslyn&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Santa Clara Valley&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Schaumburg&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Trivandrum&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Tysons&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;University Park&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Whippany&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Akron&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Bangalore&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Bellevue&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Broomfield&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Carbondale&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Costa Mesa&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Dover&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Englewood Cliffs&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Franklin Lakes&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Gainesville&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Hosur&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Jamshedpur&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Knoxville&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Ludhiana&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;McKinney&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Meridian&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Natick&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Norwalk&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Oakland&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Pochampalli&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Princeton&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Saket&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Salem&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Silao&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Stamford&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Thrissur&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Varanasi&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;West Mclean&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Windsor Mill&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Ahmednagar&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Allenton&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Beavercreek&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Birmingham&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Burleson&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Chesterfield&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Dadri&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;East Lansing&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Ewing&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Green Bay&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Gujarat&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Hyderabad&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Jodhpur&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Lansing&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Livermore&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Mangalagiri&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Mequon&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;New Franken&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Oak Ridge&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Omaha&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Rajarhat&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Raleigh&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;San Francisco&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;San Mateo&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Sumerpur&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Syracuse&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Tampa&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Vijayawada&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;West Reading&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Aliso Viejo&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Ashburn&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Atlanta&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Bridgewater&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Cedar Rapids&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Collegeville&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Coraopolis&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Estero&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Fort Belvoir&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Goa&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Humble&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Irvine&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Karunagappally&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Largo&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Los Alamos&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Milpitas&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Myrtle Point&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Newton&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Phila&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Piscataway&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Pune&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Rochester&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Rupnagar&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Santa Fe Springs&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Social Circle&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Texhoma&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Wake County&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Wausau&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Albuquerque&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Arden Hills&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Blue Bell&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Borivali&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Boston&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Cleveland&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Des Plaines&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;East Hartford&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Elkton&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Glen Burnie&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Harrisburg&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Herndon&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Kanpur Nagar&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Landover&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Lone Tree&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Marlborough&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Mohali&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Morrisville&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Olympia&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Pasadena&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Ranchi&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Reno&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Richmond&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Santa Clarita&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Scotts Valley&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Tarrytown&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Udaipur&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Vienna&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Worcester&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Alpharetta&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Ambattur&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Bhubaneshwar&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Bloomfield&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Cherry Hill&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Chevy Chase&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Denton&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Dumka&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;East Windsor&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Gandhinagar&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Greenwich&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Jaipur&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Juno Beach&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Lake County&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Las Vegas&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Mangaluru&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Miami&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;North West Delhi&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Orlando&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Patna&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Portsmouth&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Raritan&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;San Jose&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;San Rafael&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Surat&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Tacoma&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Thomaston&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;WDM&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Woburn&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Alwar&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Bedford&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Berkeley&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Brookline&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Burlington&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Delhi&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Des Moines&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Foster City&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Framingham&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Hamilton&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Hoopeston&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Jalgaon&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Kansas City&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Linthicum&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Madurai&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Mansfield&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;North Brunswick&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;North Wales&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Playa del Rey&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Plymouth&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Portland&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Saint Louis&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Saint Paul&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Secunder?b?d&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Spartanburg&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Tucson&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Vancouver&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;West Hollywood&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Wilkes-Barre&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Agoura Hills&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Alameda&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Bangalore Urban&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Belmont&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Carlsbad&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Chengannur&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Cranberry Township&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Dublin&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Ernakulam&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Frederick&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Gaithersburg&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Itanagar&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Jeffersonville&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Kurnool&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Lake Buena Vista&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;McLean&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Middletown&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Navi Mumbai&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Novato&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Offutt AFB&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Pollachi&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Providence&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Salt Lake City&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;San Ramon&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Silver Spring&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Stevens Point&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Tiruchengodu&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Vasant Vihar&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;West Menlo Park&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Woodbridge&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Allentown&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Aurora&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Basking Ridge&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Buffalo&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Chandler&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Commerce&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Delafield&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Fort Lee&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Fort Meade&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Gurgaon Rural&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Holyoke&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Jacksonville&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Kozhikode&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Lewes&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Lyndhurst&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Maitland&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Nagercoil&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Newark&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Pittsboro&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Playa Vista&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Red Bank&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Richland&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Sacramento&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;South San Francisco&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Srinagar&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Thiruvananthapuram Taluk&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Vail&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;West Delhi&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Westport&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Alabaster&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Andes&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Bhubaneswar&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Blountville&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Chicago&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Clearwater&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Dauphin County&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Eden Prairie&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Exton&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Gautam Buddha Nagar&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Groveport&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Indore&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Kalyan&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Lake Forest&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Lincoln&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Manhattan&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Milwaukee&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;New Orleans&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Oshkosh&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Patuxent River&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Rajkot&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Redlands&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Redmond&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Santa Barbara&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Santa Cruz&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Tallahassee&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Thousand Oaks&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Visakhapatnam&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Westlake&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;APAC&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Auburn&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Bengaluru East&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Brookfield&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Chamblee&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Cupertino&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Defence Colony&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Eugene&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Fort Huachuca&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Golaghat&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Huntsville&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Iselin&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Kerala&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Los Angeles&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Loveland&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Minneapolis-Saint Paul&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Naperville&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Noida&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Pimpri Chinchwad&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Pittsburgh&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Pune/Pimpri-Chinchwad&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Reynoldsburg&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Rolling Meadows&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Somerset&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Southborough&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Thane&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Urbandale&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Weehawken&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;West Des Moines&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Allendale&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Austin&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Bentonville&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Brookhaven&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Chandigarh&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Columbia&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Dallas&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Edison&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Fort Collins&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Golden&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Highland&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Indianapolis&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Kolkata&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Laurel&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Los Gatos&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Melrose Park&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Mumbai&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Nashville&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Owensboro&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Plano&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Punjab&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Richardson&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Roseburg&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Somerville&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Southfield&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Thanjavur&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Uttar Pradesh&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Wellston&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;West Palm Beach&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Arvada&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Beaverton&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Berhampore&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Burbank&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Chantilly&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Concord&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Denver&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Fort Washington&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Fort Worth&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Gurugram&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Honolulu&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Jalandhar&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Jersey City&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Lucknow&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Madison&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Malvern&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Nagpur&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;North Bethesda&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Parlier&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Pleasanton&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Raipur&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Sahibzada Ajit Singh Nagar&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Saint Augustine&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Sparks&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Sriperumbudur&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Thiruvarur&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Valencia&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Wichita&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Winston-Salem&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Ambala&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Bandra&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Belen&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Cambridge&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Chattanooga&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Corvallis&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Detroit&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Dimondale&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Franklin&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Fremont&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Hoshiarpur&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Jammu&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;King of Prussia&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Lisle&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Maharashtra&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Maryland Heights&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;North Brunswick Township&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Northridge&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;O&apos;Fallon&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Plymouth Meeting&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Poway&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Riverton&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Saint Petersburg&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Sheboygan&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;St. Louis&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Tulsa&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Vapi&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;West Los Angeles&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Wilmington&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Alexandria&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Arlington&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Bolling AFB&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Boulder&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Cary&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Coeur d&apos;Alene&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Colorado Springs&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Emeryville&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Fayetteville&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Glendale&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Hershey&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Ipswich&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Kolhapur&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Long Beach&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Long Island City&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Millville&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Monterey&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Mount Laurel&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Peoria&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Philadelphia&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Rayagada&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Renton&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Richville&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Scottsdale&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;South Delhi&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Telangana&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Udipi&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Virginia Beach&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Amritsar&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Andover&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Belcamp&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Blue Ash&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Cincinnati&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Clovis&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Dayton&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Dwarka&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Edgewater Park&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Georgetown&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Haines City&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Inver Grove Heights&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Kangra&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Little Rock&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Logan&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Midnapore&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Minneapolis&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;New York City&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Palo Alto&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Pella&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Preet Vihar&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Redwood City&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Rosemont&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Santa Clara&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Santa Monica&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Tamil Nadu&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Troy&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Vishakhapatnam&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Woodland Hills&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Agra&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Albion&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Benicia&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Bhopal&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Buffalo Grove&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Charlotte&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Culver City&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Downers Grove&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Durham&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Glens Falls&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Groton&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Ithaca&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Kochi&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;La Grange&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Lake Success&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Mandi&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Memphis&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;New Brunswick&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Oklahoma City&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Patel Nagar&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Port Washington&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Provo&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Rockville&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;San Antonio&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Siwani&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Sulphur Springs&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Tiruchirappalli&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Velachery&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;West New York&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Woonsocket&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Armonk&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Aurangabad&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Baltimore&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Brisbane&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Brooklyn&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Deerfield&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Dehradun&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;El Segundo&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Fort Lauderdale&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Grand Junction&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Hillsboro&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Irving&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Kingstowne&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Lenexa&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Louisville&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Melville&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;New Haven&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Norfolk&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Palm Beach Gardens&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Plantation&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Quincy&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Richfield&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Roswell&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;South Bend&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Springfield&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Thiruvananthapuram&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Vadodara&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;West Chester Township&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Westerville&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Alipur&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Arlington Heights&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Bengaluru&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Bothell&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Branchburg&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Coimbatore&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Columbus&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Englewood&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Fishers&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Gurgaon&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Haryana&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Houston&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Karnataka&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Longmont&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Lorain&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Matawan&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Mountain View&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Newport Beach&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Orange&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Phoenix&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Puducherry&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Research Triangle Park&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Roanoke&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Santa Fe&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Seattle&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Tenkasi&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Ulhasnagar&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Watertown&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Ahmedabad&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Allegan&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Baton Rouge&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Bethesda&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Charlottesville&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Chennai&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Delhi Cantonment&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Draper&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Earth City&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Grand Rapids&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Guindy&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Jabalpur&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Jessup&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Lafayette&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Lanham&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Manesar&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Menlo Park&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;New Delhi&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Oak Brook&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Olive Branch&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Portage County&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Rahway&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Rohini&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;San Diego&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Suitland&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Sunnyvale&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Toano&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Waltham&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Winter Park&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Ratio' datatype='real' name='[Parameter 1]' param-domain-type='any' role='measure' type='quantitative' value='6.'>
+          <calculation class='tableau' formula='6.' />
+        </column>
+      </datasource-dependencies>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Data_Scientist_Job_Listings_Dat' id='Data!Scientist!Job!Listings!Dat_0F26F4A12AEA4D1EB401478724EA315E'>
+            <properties context=''>
+              <relation connection='excel-direct.0k47k0m1uw8a1j16km01x0eg7mgq' name='Data_Scientist_Job_Listings_Dat' table='[Data_Scientist_Job_Listings_Dat$]' type='table'>
+                <columns gridOrigin='A1:AA10001:no:A1:AA10001:0' header='yes' outcome='2'>
+                  <column datatype='integer' name='id_number' ordinal='0' />
+                  <column datatype='integer' name='source_id' ordinal='1' />
+                  <column datatype='string' name='original_record_id' ordinal='2' />
+                  <column datatype='string' name='original_job_posting_site' ordinal='3' />
+                  <column datatype='string' name='original_job_title' ordinal='4' />
+                  <column datatype='string' name='cleansed_job_title' ordinal='5' />
+                  <column datatype='string' name='original_company_name' ordinal='6' />
+                  <column datatype='string' name='original_industry' ordinal='7' />
+                  <column datatype='string' name='City' ordinal='8' />
+                  <column datatype='string' name='State' ordinal='9' />
+                  <column datatype='string' name='Country' ordinal='10' />
+                  <column datatype='string' name='original_salary' ordinal='11' />
+                  <column datatype='integer' name='cleansed_salary_min' ordinal='12' />
+                  <column datatype='integer' name='cleansed_salary_max' ordinal='13' />
+                  <column datatype='real' name='cleansed_salary_avg' ordinal='14' />
+                  <column datatype='string' name='original_job_type' ordinal='15' />
+                  <column datatype='string' name='original_work_type' ordinal='16' />
+                  <column datatype='string' name='original_job_description1' ordinal='17' />
+                  <column datatype='string' name='original_job_description2' ordinal='18' />
+                  <column datatype='date' name='posting_date' ordinal='19' />
+                  <column datatype='string' name='cleansed_job_type' ordinal='20' />
+                  <column datatype='integer' name='isContract' ordinal='21' />
+                  <column datatype='integer' name='isInternship' ordinal='22' />
+                  <column datatype='integer' name='isEntryLevel' ordinal='23' />
+                  <column datatype='integer' name='isMidSeniorLevel' ordinal='24' />
+                  <column datatype='real' name='Latitude' ordinal='25' />
+                  <column datatype='real' name='Longitude' ordinal='26' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Filtered Map'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='28'>Data Science Job Listing Map</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='https://public.tableau.com/workbooks/DataScienceJobListingMap/FilteredMap?rev=' id='FilteredMap' path='/workbooks/DataScienceJobListingMap' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Data_Scientist_Job_Listings_Dat (Data_Scientist_Job_Listings_Data_LatLong)' name='federated.1oc7p641vae6m51bwai7w0jixmtq' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1oc7p641vae6m51bwai7w0jixmtq'>
+            <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[City]' derivation='Count' name='[cnt:City:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[City]' derivation='None' name='[none:City:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1oc7p641vae6m51bwai7w0jixmtq].[cnt:City:qk]' included-values='all' />
+          <filter class='categorical' column='[federated.1oc7p641vae6m51bwai7w0jixmtq].[none:Country:nk]'>
+            <groupfilter function='member' level='[none:Country:nk]' member='&quot;United States&quot;' user:ui-domain='cascading' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1oc7p641vae6m51bwai7w0jixmtq].[none:State:nk]'>
+            <groupfilter function='level-members' level='[none:State:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1oc7p641vae6m51bwai7w0jixmtq].[none:Country:nk]</column>
+            <column>[federated.1oc7p641vae6m51bwai7w0jixmtq].[none:State:nk]</column>
+            <column>[federated.1oc7p641vae6m51bwai7w0jixmtq].[cnt:City:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1oc7p641vae6m51bwai7w0jixmtq].[cnt:City:qk]' palette='sunrise_sunset_diverging_10_0' type='interpolated' />
+            <encoding attr='size' field='[federated.1oc7p641vae6m51bwai7w0jixmtq].[cnt:City:qk]' field-type='quantitative' max-size='1' min-size='0.0155684' type='quantsize' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.1oc7p641vae6m51bwai7w0jixmtq].[cnt:City:qk]' value='Total Listings'>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontsize='18'>Total Listings</run>
+              </formatted-text>
+            </format>
+            <format attr='title' field='[federated.1oc7p641vae6m51bwai7w0jixmtq].[none:Country:nk]' value='Country of Interest'>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontsize='18'>Country of Interest</run>
+              </formatted-text>
+            </format>
+            <format attr='title' field='[federated.1oc7p641vae6m51bwai7w0jixmtq].[none:State:nk]' value='State of Interest'>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontsize='18'>State of Interest</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1oc7p641vae6m51bwai7w0jixmtq].[cnt:City:qk]' />
+              <size column='[federated.1oc7p641vae6m51bwai7w0jixmtq].[cnt:City:qk]' />
+              <lod column='[federated.1oc7p641vae6m51bwai7w0jixmtq].[none:Country:nk]' />
+              <lod column='[federated.1oc7p641vae6m51bwai7w0jixmtq].[none:State:nk]' />
+              <lod column='[federated.1oc7p641vae6m51bwai7w0jixmtq].[none:City:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='shape' value=':filled/square' />
+                <format attr='size' value='5.7254762649536133' />
+                <format attr='has-stroke' value='true' />
+                <format attr='mark-transparency' value='132' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1oc7p641vae6m51bwai7w0jixmtq].[Latitude (generated)]</rows>
+        <cols>[federated.1oc7p641vae6m51bwai7w0jixmtq].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{38157E57-DA0C-42C9-9EE6-3F1543697319}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <repository-location derived-from='https://public.tableau.com/workbooks/DataScienceJobListingMap/Dashboard1?rev=' id='Dashboard1' path='/workbooks/DataScienceJobListingMap' revision='' />
+      <style />
+      <size sizing-mode='automatic' />
+      <datasources>
+        <datasource caption='Data_Scientist_Job_Listings_Dat (Data_Scientist_Job_Listings_Data_LatLong)' name='federated.1oc7p641vae6m51bwai7w0jixmtq' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1oc7p641vae6m51bwai7w0jixmtq'>
+        <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+        <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+        <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+        <column-instance column='[City]' derivation='Count' name='[cnt:City:qk]' pivot='key' type='quantitative' />
+        <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+        <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98734' id='7' param='horz' type-v2='layout-flow' w='99212' x='394' y='633'>
+            <zone h='98734' id='5' type-v2='layout-basic' w='99212' x='394' y='633'>
+              <zone h='98734' id='3' name='Filtered Map' w='99212' x='394' y='633'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='8703' id='8' name='Filtered Map' param='[federated.1oc7p641vae6m51bwai7w0jixmtq].[cnt:City:qk]' show-domain='false' show-null-ctrls='false' type-v2='filter' values='relevant' w='9962' x='5321' y='21440' />
+        <zone h='5854' id='10' mode='dropdown' name='Filtered Map' param='[federated.1oc7p641vae6m51bwai7w0jixmtq].[none:Country:nk]' type-v2='filter' values='cascading' w='12814' x='3704' y='8307' />
+        <zone h='6804' id='9' mode='dropdown' name='Filtered Map' param='[federated.1oc7p641vae6m51bwai7w0jixmtq].[none:State:nk]' type-v2='filter' values='cascading' w='13027' x='3704' y='14320' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='18' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98734' id='17' param='vert' type-v2='layout-flow' w='99212' x='394' y='633'>
+                <zone h='8703' id='8' name='Filtered Map' param='[federated.1oc7p641vae6m51bwai7w0jixmtq].[cnt:City:qk]' show-domain='false' show-null-ctrls='false' type-v2='filter' values='relevant' w='9962' x='5321' y='21440'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5854' id='10' mode='dropdown' name='Filtered Map' param='[federated.1oc7p641vae6m51bwai7w0jixmtq].[none:Country:nk]' type-v2='filter' values='cascading' w='12814' x='3704' y='8307'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6804' id='9' mode='dropdown' name='Filtered Map' param='[federated.1oc7p641vae6m51bwai7w0jixmtq].[none:State:nk]' type-v2='filter' values='cascading' w='13027' x='3704' y='14320'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='98734' id='3' is-fixed='true' name='Filtered Map' w='99212' x='394' y='633'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{70121BB8-78F4-48E9-B2B0-6A971A468E34}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Filtered Map'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1oc7p641vae6m51bwai7w0jixmtq].[cnt:City:qk]' show-domain='false' show-null-ctrls='false' type='filter' values='cascading' />
+            <card mode='dropdown' param='[federated.1oc7p641vae6m51bwai7w0jixmtq].[none:State:nk]' type='filter' values='cascading' />
+            <card mode='dropdown' param='[federated.1oc7p641vae6m51bwai7w0jixmtq].[none:Country:nk]' type='filter' values='cascading' />
+            <card pane-specification-id='3' param='[federated.1oc7p641vae6m51bwai7w0jixmtq].[cnt:City:qk]' type='size' />
+            <card pane-specification-id='3' param='[federated.1oc7p641vae6m51bwai7w0jixmtq].[cnt:City:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1oc7p641vae6m51bwai7w0jixmtq].[cnt:City:qk]</field>
+            <field>[federated.1oc7p641vae6m51bwai7w0jixmtq].[none:Country:nk]</field>
+            <field>[federated.1oc7p641vae6m51bwai7w0jixmtq].[none:State:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{242A1CC7-8686-4E90-8BCF-707E7DEAC0D6}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Filtered Map'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='3' />
+      <simple-id uuid='{6DE0BF3F-5BDB-43C6-9571-1A8C6E438531}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      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
+      oWsSAKFrEgChaxIAoWsSAKFrEgChaxIAoWsSAKFrEgChaxIAoWsSAKFrEgChaxIAoWsSAKFr
+      EgChaxIAoWsSAKFrEgChaxIAoWsSAKFrEgChaxIAoWsSAKFrEgChaxIAoWsSAKFrEgChaxIA
+      oWsSAKFrEgChaxIAoWsSAKFrEgChaxIAoWsSAKFrEgChaxIAoWsSAKFrEgChaxIAoWsSAKFr
+      EgChaxIAoWsSAKFrEgChaxIAoWsSAKFrEgChaxIAoWsSAKFrEgChaxIAoWsSAKFrEgChaxIA
+      oWsSAKFrEgChaxIAoWsSAKFrEgChaxIAoWsSAKFrEgChaxIAoWsSAKFrEgChaxIAoWsSAKFr
+      EgChaxIAoWsSAKFrEgChaxIAoWsSAKFrEgChaxIAoWsSAKFrEgChaxIAoWsSAKFrEgChaxIA
+      oWsSAKFrEgChaxIAoWsSAKFrEgChaxIAoWsSAKFrEgChaxIAoWsSAKFrEgChaxIAoWsSAKFr
+      EgChaxIAoWsSAKFrEgChaxIAoWsSAKFrEgChaxIAoWv/D6GOn8t2d8jwAAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
