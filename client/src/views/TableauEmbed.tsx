@@ -10,37 +10,25 @@ const baseUrl = 'https://public.tableau.com/views'
 const queryParams =
   '?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link'
 
-const TableauEmbed: React.FC<TableauEmbedProps> = (
+export const TableauEmbed: React.FC<TableauEmbedProps> = (
   props: TableauEmbedProps,
 ) => {
   const { workbookUrl, newDataUrl } = props
   const url = `${baseUrl}/${workbookUrl}${queryParams}`
+  const containerId = `tableauContainer-${workbookUrl}`
+
   useEffect(() => {
-    const containerDiv = document.getElementById('tableauVizContainer')
-
+    const containerDiv = document.getElementById(containerId)
     const options = {
-      width: '100%',
-      height: '5000px',
-      hideTabs: true,
-      hideToolbar: true,
-      //   onFirstInteractive: () => {
-      //     const viz = tableau.Viz.getVizs()[0]
-      //     const workbook = viz.getWorkbook()
-
-      //     // Your logic to change the data source dynamically
-      //     workbook.changeDataSourceAsync(newDataUrl)
-      //   },
+      width: workbookUrl.startsWith('DataScience') ? '1500px' : '100%',
+      height: '1000px',
     }
-
     const viz = new tableau.Viz(containerDiv, url, options)
-
     return () => {
-      // Clean up the Tableau Viz when the component is unmounted
+      // Clean up the Viz when the component is unmounted
       viz.dispose()
     }
   }, [workbookUrl, newDataUrl])
 
-  return <div id='tableauVizContainer' />
+  return <div id={containerId} style={{ alignContent: 'center' }} />
 }
-
-export default TableauEmbed
