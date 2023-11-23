@@ -16,7 +16,14 @@ import DataThresholdingIcon from '@mui/icons-material/DataThresholding'
 const pages = ['Compensation', 'Location', 'Remote', 'Titles']
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout']
 
-export const NavHeader = () => {
+export interface SectionRef {
+  compRef: React.RefObject<HTMLDivElement>
+  locRef: React.RefObject<HTMLDivElement>
+  remoteRef: React.RefObject<HTMLDivElement>
+  titleRef: React.RefObject<HTMLDivElement>
+}
+
+export const NavHeader = (refProps: SectionRef) => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
     null,
@@ -28,6 +35,24 @@ export const NavHeader = () => {
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null)
+  }
+
+  const handleScroll = (page: string) => {
+    let ref
+    if (page === 'Compensation') {
+      ref = refProps.compRef
+    } else if (page === 'Location') {
+      ref = refProps.locRef
+    } else if (page === 'Remote') {
+      ref = refProps.remoteRef
+    } else {
+      ref = refProps.titleRef
+    }
+    if (ref.current) {
+      console.log('ref is')
+      console.log(ref)
+      ref.current.scrollIntoView({ behavior: 'smooth' })
+    }
   }
 
   const handleCloseUserMenu = () => {
@@ -89,7 +114,9 @@ export const NavHeader = () => {
               }}
             >
               {pages.map(page => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem key={page} onClick={() => {
+                  handleScroll(page)
+                }}>
                   <Typography textAlign='center'>{page}</Typography>
                 </MenuItem>
               ))}
