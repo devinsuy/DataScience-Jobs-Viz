@@ -38,6 +38,10 @@ export const Home = () => {
             <h1 style={{ fontWeight: 'bold' }}>
               Is remote work important to you?
             </h1>
+            <p style={{ fontSize: '1.2em' }}>
+              {' '}
+              We analyzed around 20 thousand unique data science job listings.
+            </p>
           </div>
           <RemoteDashboard />
 
