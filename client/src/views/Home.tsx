@@ -52,9 +52,10 @@ export const Home = () => {
       <div className='main-content'>
         <div className='main-header'>
           <h1 style={{ fontWeight: 'bold' }}>Interested in data science?</h1>
+          {/* eslint-disable react/no-unescaped-entities */}
           <p style={{ fontSize: '1.2em' }}>
-            We&aposll help you understand the industry and find the job
-            that&aposs right for you.
+            We'll help you understand the industry and find the job
+            that's right for you.
           </p>
         </div>
 
