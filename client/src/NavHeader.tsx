@@ -48,7 +48,7 @@ export const NavHeader = (refProps: SectionRef) => {
       ref = refProps.titleRef
     }
     if (ref.current) {
-      ref.current.scrollIntoView({ behavior: 'smooth' })
+      ref.current.scrollIntoView({ block: 'start', behavior: 'smooth', inline: 'nearest' })
     }
     handleCloseNavMenu()
   }
