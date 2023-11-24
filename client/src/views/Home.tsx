@@ -1,7 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import '../styles/views/Home.css'
 import { TableauEmbed, type TableauEmbedProps } from './TableauEmbed'
-import { RemoteDashboard } from './remote/RemoteDashboard'
 import { NavHeader } from 'NavHeader'
 import { CloudCountryIndia, CloudCountryUS, CloudRemoteAllowedNo, CloudRemoteAllowedYes, CountryCounts, JobDesc, RemoteAllowedCounts, RemoteByCountry, RemoteByYear } from './remote/plots'
 import { DropdownSelect } from './DropdownSelect'
@@ -15,6 +14,10 @@ export const Home = () => {
   const locationVizProps: TableauEmbedProps = {
     workbookUrl: 'DataScienceJobListingMap_17006365675910/Dashboard1',
     newDataUrl: '',
+  }
+  const jobTitleVizProps: TableauEmbedProps = {
+    workbookUrl: 'PercantageoflistingsbyJobTitle/Dashboard1',
+    newDataUrl: ''
   }
 
   const compRef = useRef<HTMLDivElement>(null)
@@ -60,8 +63,17 @@ export const Home = () => {
             <h1 style={{ fontWeight: 'bold' }}>Where are you located?</h1>
           </div>
           <TableauEmbed {...locationVizProps} />
+        </div>
 
-          <div ref={remoteRef} className='section-text'>
+        <div ref={titleRef}>
+          <div className='section-text'>
+            <h1 style={{ fontWeight: 'bold' }}>What kind of job title can you expect?</h1>
+          </div>
+          <TableauEmbed {...jobTitleVizProps} />
+        </div>
+
+        <div ref={remoteRef}>
+          <div className='section-text'>
             <h1 style={{ fontWeight: 'bold' }}>
               Is remote work important to you?
             </h1>
@@ -69,54 +81,54 @@ export const Home = () => {
               We analyzed around 20 thousand unique data science job listings.
             </p>
           </div>
-
-          <div style={{ justifyContent: 'right' }}>
-            <p style={{ fontWeight: 'bold', fontSize: '1.2em', marginBottom: '20px' }}>How often was remote work offered?</p>
-            <RemoteAllowedCounts />
-            <p style={{ fontWeight: 'bold', fontSize: '1.2em', marginTop: '20px', marginBottom: '20px' }}>Job Listings By Country</p>
-            <CountryCounts />
-            <div style={{ marginTop: '20px' }} />
-          </div>
-
-          <div className='section-text'>
-            <h1 style={{ fontWeight: 'bold' }}>
-              What did we learn?
-            </h1>
-          </div>
-
-          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-            <div>
-              <p style={{ fontWeight: 'bold', fontSize: '1.2em', marginBottom: '20px' }}>Remote Work By Country</p>
-              <RemoteByCountry />
-            </div>
-            <div>
-              <p style={{ fontWeight: 'bold', fontSize: '1.2em', marginBottom: '20px' }}>Remote Work By Year</p>
-              <RemoteByYear />
-            </div>
-          </div>
-
-          <div style={{ marginTop: '20px' }}>
-            <p style={{ fontWeight: 'bold', fontSize: '1.2em', marginBottom: '20px' }}>Words most commonly mentioned in job descriptions</p>
-          </div>
-          <div style={{ marginTop: '20px' }}>
-            <div style={{ marginBottom: '20px' }}>
-              <p style={{ fontSize: '1.2em' }}>Select a filter:</p>
-            </div>
-            <DropdownSelect options={options} onChange={(selectedOption: string) => {
-              setCloudType(selectedOption as WordCloudEnum)
-            }} />
-            <div style={{ marginTop: '20px' }}>
-              {getWordCloud()}
-            </div>
-          </div>
-
-          <div ref={compRef} style={{ marginTop: '40px' }} className='section-text'>
-            <h1 style={{ fontWeight: 'bold' }}>
-              What kind of compensation can you expect?
-            </h1>
-          </div>
-          <TableauEmbed {...compensationVizProps} />
         </div>
+
+        <div style={{ justifyContent: 'right' }}>
+          <p style={{ fontWeight: 'bold', fontSize: '1.2em', marginBottom: '20px' }}>How often was remote work offered?</p>
+          <RemoteAllowedCounts />
+          <p style={{ fontWeight: 'bold', fontSize: '1.2em', marginTop: '20px', marginBottom: '20px' }}>Job Listings By Country</p>
+          <CountryCounts />
+          <div style={{ marginTop: '20px' }} />
+        </div>
+
+        <div className='section-text'>
+          <h1 style={{ fontWeight: 'bold' }}>
+            What did we learn?
+          </h1>
+        </div>
+
+        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+          <div>
+            <p style={{ fontWeight: 'bold', fontSize: '1.2em', marginBottom: '20px' }}>Remote Work By Country</p>
+            <RemoteByCountry />
+          </div>
+          <div>
+            <p style={{ fontWeight: 'bold', fontSize: '1.2em', marginBottom: '20px' }}>Remote Work By Year</p>
+            <RemoteByYear />
+          </div>
+        </div>
+
+        <div style={{ marginTop: '20px' }}>
+          <p style={{ fontWeight: 'bold', fontSize: '1.2em', marginBottom: '20px' }}>Words most commonly mentioned in job descriptions</p>
+        </div>
+        <div style={{ marginTop: '20px' }}>
+          <div style={{ marginBottom: '20px' }}>
+            <p style={{ fontSize: '1.2em' }}>Select a filter:</p>
+          </div>
+          <DropdownSelect options={options} onChange={(selectedOption: string) => {
+            setCloudType(selectedOption as WordCloudEnum)
+          }} />
+          <div style={{ marginTop: '20px' }}>
+            {getWordCloud()}
+          </div>
+        </div>
+
+        <div ref={compRef} style={{ marginTop: '40px' }} className='section-text'>
+          <h1 style={{ fontWeight: 'bold' }}>
+            What kind of compensation can you expect?
+          </h1>
+        </div>
+        <TableauEmbed {...compensationVizProps} />
       </div>
     </div>
   )

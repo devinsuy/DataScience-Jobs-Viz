@@ -12,7 +12,7 @@ import Button from '@mui/material/Button'
 import MenuItem from '@mui/material/MenuItem'
 import DataThresholdingIcon from '@mui/icons-material/DataThresholding'
 
-const pages = ['Location', 'Remote', 'Compensation', 'Titles']
+const pages = ['Location', 'Job Title', 'Remote', 'Compensation']
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout']
 
 export interface SectionRef {
