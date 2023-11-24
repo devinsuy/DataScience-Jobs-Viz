@@ -9,11 +9,10 @@ import MenuIcon from '@mui/icons-material/Menu'
 import Container from '@mui/material/Container'
 import Avatar from '@mui/material/Avatar'
 import Button from '@mui/material/Button'
-import Tooltip from '@mui/material/Tooltip'
 import MenuItem from '@mui/material/MenuItem'
 import DataThresholdingIcon from '@mui/icons-material/DataThresholding'
 
-const pages = ['Compensation', 'Location', 'Remote', 'Titles']
+const pages = ['Location', 'Remote', 'Compensation', 'Titles']
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout']
 
 export interface SectionRef {
@@ -49,10 +48,9 @@ export const NavHeader = (refProps: SectionRef) => {
       ref = refProps.titleRef
     }
     if (ref.current) {
-      console.log('ref is')
-      console.log(ref)
       ref.current.scrollIntoView({ behavior: 'smooth' })
     }
+    handleCloseNavMenu()
   }
 
   const handleCloseUserMenu = () => {
@@ -141,13 +139,15 @@ export const NavHeader = (refProps: SectionRef) => {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            DATA SCIENCE
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map(page => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
+                onClick={() => {
+                  handleScroll(page)
+                }}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {page}

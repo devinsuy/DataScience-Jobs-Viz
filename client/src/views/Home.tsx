@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import '../styles/views/Home.css'
 import { TableauEmbed, type TableauEmbedProps } from './TableauEmbed'
 import { RemoteDashboard } from './remote/RemoteDashboard'
 import { NavHeader } from 'NavHeader'
-import { CountryCounts, JobDesc, RemoteAllowedCounts, RemoteByCountry, RemoteByYear } from './remote/plots'
+import { CloudCountryIndia, CloudCountryUS, CloudRemoteAllowedNo, CloudRemoteAllowedYes, CountryCounts, JobDesc, RemoteAllowedCounts, RemoteByCountry, RemoteByYear } from './remote/plots'
+import { DropdownSelect } from './DropdownSelect'
 
 export const Home = () => {
   const compensationVizProps: TableauEmbedProps = {
@@ -16,10 +17,30 @@ export const Home = () => {
     newDataUrl: '',
   }
 
-  const compRef = React.useRef<HTMLDivElement>(null)
-  const locRef = React.useRef<HTMLDivElement>(null)
-  const remoteRef = React.useRef<HTMLDivElement>(null)
-  const titleRef = React.useRef<HTMLDivElement>(null)
+  const compRef = useRef<HTMLDivElement>(null)
+  const locRef = useRef<HTMLDivElement>(null)
+  const remoteRef = useRef<HTMLDivElement>(null)
+  const titleRef = useRef<HTMLDivElement>(null)
+
+  // Conditionally select which word cloud type to render
+  const options = ['All Job Listings', 'United States', 'India', 'Remote Allowed', 'Remote Not Allowed']
+  type WordCloudEnum = 'India' | 'United States' | 'All Job Listings' | 'Remote Allowed' | 'Remote Not Allowed'
+  const [cloudType, setCloudType] = useState<WordCloudEnum>('All Job Listings')
+
+  const getWordCloud = (): React.ReactElement => {
+    switch (cloudType) {
+      case 'All Job Listings':
+        return <JobDesc />
+      case 'United States':
+        return <CloudCountryUS />
+      case 'India':
+        return <CloudCountryIndia />
+      case 'Remote Allowed':
+        return <CloudRemoteAllowedYes />
+      case 'Remote Not Allowed':
+        return <CloudRemoteAllowedNo />
+    }
+  }
 
   return (
     <div className='main-container'>
@@ -29,8 +50,8 @@ export const Home = () => {
         <div className='main-header'>
           <h1 style={{ fontWeight: 'bold' }}>Interested in data science?</h1>
           <p style={{ fontSize: '1.2em' }}>
-            We&apos;ll help you understand the industry and find the job
-            that&apos;s right for you.
+            We&aposll help you understand the industry and find the job
+            that&aposs right for you.
           </p>
         </div>
 
@@ -77,7 +98,17 @@ export const Home = () => {
           <div style={{ marginTop: '20px' }}>
             <p style={{ fontWeight: 'bold', fontSize: '1.2em', marginBottom: '20px' }}>Words most commonly mentioned in job descriptions</p>
           </div>
-          <JobDesc />
+          <div style={{ marginTop: '20px' }}>
+            <div style={{ marginBottom: '20px' }}>
+              <p style={{ fontSize: '1.2em' }}>Select a filter:</p>
+            </div>
+            <DropdownSelect options={options} onChange={(selectedOption: string) => {
+              setCloudType(selectedOption as WordCloudEnum)
+            }} />
+            <div style={{ marginTop: '20px' }}>
+              {getWordCloud()}
+            </div>
+          </div>
 
           <div ref={compRef} style={{ marginTop: '40px' }} className='section-text'>
             <h1 style={{ fontWeight: 'bold' }}>
