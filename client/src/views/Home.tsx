@@ -78,18 +78,7 @@ export const Home = () => {
             <h1 style={{ fontWeight: 'bold' }}>
               Is remote work important to you?
             </h1>
-            <p style={{ fontSize: '1.2em' }}>
-              We analyzed around 20 thousand unique data science job listings.
-            </p>
           </div>
-        </div>
-
-        <div style={{ justifyContent: 'right' }}>
-          <p style={{ fontWeight: 'bold', fontSize: '1.2em', marginBottom: '20px' }}>How often was remote work offered?</p>
-          <RemoteAllowedCounts />
-          <p style={{ fontWeight: 'bold', fontSize: '1.2em', marginTop: '20px', marginBottom: '20px' }}>Job Listings By Country</p>
-          <CountryCounts />
-          <div style={{ marginTop: '20px' }} />
         </div>
 
         <div className='section-text'>
