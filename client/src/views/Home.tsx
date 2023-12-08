@@ -22,7 +22,7 @@ export const Home = () => {
   }
 
   const locationVizProps: TableauEmbedProps = {
-    workbookUrl: 'DataScienceJobListingMap_17006365675910/Dashboard1',
+    workbookUrl: 'DataScienceJobListingMap/Dashboard1',
     newDataUrl: '',
   }
   const jobTitleVizProps: TableauEmbedProps = {
