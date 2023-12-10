@@ -7,13 +7,12 @@ import {
   CloudCountryUS,
   CloudRemoteAllowedNo,
   CloudRemoteAllowedYes,
-  CountryCounts,
   JobDesc,
-  RemoteAllowedCounts,
   RemoteByCountry,
   RemoteByYear,
 } from './remote/plots'
 import { DropdownSelect } from './DropdownSelect'
+import { AllCloudPlots } from './remote/plots/wordCloud/AllCloudPlots'
 
 export const Home = () => {
   const compensationVizProps: TableauEmbedProps = {
@@ -37,23 +36,25 @@ export const Home = () => {
 
   // Conditionally select which word cloud type to render
   const options = [
-    'All Job Listings',
+    'Show All Plots',
+    'Unfiltered Job Listings',
     'United States',
     'India',
     'Remote Allowed',
     'Remote Not Allowed',
   ]
   type WordCloudEnum =
+    | 'Show All Plots'
     | 'India'
     | 'United States'
-    | 'All Job Listings'
+    | 'Unfiltered Job Listings'
     | 'Remote Allowed'
     | 'Remote Not Allowed'
-  const [cloudType, setCloudType] = useState<WordCloudEnum>('All Job Listings')
+  const [cloudType, setCloudType] = useState<WordCloudEnum>('Show All Plots')
 
   const getWordCloud = (): React.ReactElement => {
     switch (cloudType) {
-      case 'All Job Listings':
+      case 'Unfiltered Job Listings':
         return <JobDesc />
       case 'United States':
         return <CloudCountryUS />
@@ -63,6 +64,8 @@ export const Home = () => {
         return <CloudRemoteAllowedYes />
       case 'Remote Not Allowed':
         return <CloudRemoteAllowedNo />
+      case 'Show All Plots':
+        return <AllCloudPlots />
     }
   }
 
