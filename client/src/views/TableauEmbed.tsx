@@ -20,8 +20,8 @@ export const TableauEmbed: React.FC<TableauEmbedProps> = (
   useEffect(() => {
     const containerDiv = document.getElementById(containerId)
     const options = {
-      width: workbookUrl.startsWith('DataScience') ? '90%' : '100%',
-      height: '1000px',
+      width: '100%',
+      height: workbookUrl.startsWith('DataScience') ? '1000px' : '800px',
     }
     const viz = new tableau.Viz(containerDiv, url, options)
     return () => {

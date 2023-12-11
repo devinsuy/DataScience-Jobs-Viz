@@ -13,6 +13,19 @@ import {
 } from './remote/plots'
 import { DropdownSelect } from './DropdownSelect'
 import { AllCloudPlots } from './remote/plots/wordCloud/AllCloudPlots'
+import { SectionDivider, Spacer } from './UtilComponents'
+
+const boldTextStyle = {
+  fontWeight: 'bold',
+}
+
+const sectionHeadingStyle = {
+  fontWeight: 'bold',
+  fontSize: '1.2em',
+  marginBottom: '20px',
+}
+
+const sectionContainerStyle = {} as any
 
 export const Home = () => {
   const compensationVizProps: TableauEmbedProps = {
@@ -94,66 +107,58 @@ export const Home = () => {
       <NavHeader {...{ compRef, locRef, remoteRef, titleRef }} />
 
       <div className='main-content'>
-        <div className='main-header'>
-          <h1 style={{ fontWeight: 'bold' }}>Interested in data science?</h1>
+        <Spacer height={40} />
+        <div>
+          <h1 style={boldTextStyle}>Interested in data science?</h1>
           {/* eslint-disable react/no-unescaped-entities */}
           <p style={{ fontSize: '1.2em' }}>
             We'll help you understand the industry and find the job that's right
             for you.
           </p>
         </div>
+        <Spacer height={20} />
+        <SectionDivider />
 
-        <div ref={locRef}>
-          <div className='section-text'>
-            <h1 style={{ fontWeight: 'bold' }}>Where are you located?</h1>
+        <Spacer height={20} />
+        <div ref={locRef} style={sectionContainerStyle}>
+          <div>
+            <a href='#Location' />
+            <h1 style={boldTextStyle}>Where are you located?</h1>
           </div>
           <TableauEmbed {...locationVizProps} />
         </div>
 
+        <Spacer height={40} />
+        <SectionDivider />
+        <Spacer height={20} />
+
         <div ref={titleRef}>
-          <div className='section-text'>
-            <h1 style={{ fontWeight: 'bold' }}>
+          <div>
+            <h1 style={boldTextStyle}>
               What kind of job title can you expect?
             </h1>
           </div>
+          <Spacer height={40} />
           <TableauEmbed {...jobTitleVizProps} />
         </div>
+        <Spacer height={40} />
+        <SectionDivider />
+        <Spacer height={20} />
 
         <div ref={remoteRef}>
-          <div className='section-text'>
-            <h1 style={{ fontWeight: 'bold' }}>
-              Is remote work important to you?
-            </h1>
+          <div>
+            <h1 style={boldTextStyle}>Is remote work important to you?</h1>
+            <Spacer height={20} />
           </div>
-        </div>
-
-        <div className='section-text'>
-          <h1 style={{ fontWeight: 'bold' }}>What did we learn?</h1>
         </div>
 
         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
           <div>
-            <p
-              style={{
-                fontWeight: 'bold',
-                fontSize: '1.2em',
-                marginBottom: '20px',
-              }}
-            >
-              Remote Work By Country
-            </p>
+            <p style={sectionHeadingStyle}>Remote Work By Country</p>
             <RemoteByCountry />
           </div>
           <div>
-            <p
-              style={{
-                fontWeight: 'bold',
-                fontSize: '1.2em',
-                marginBottom: '20px',
-              }}
-            >
-              Remote Work By Year
-            </p>
+            <p style={sectionHeadingStyle}>Remote Work By Year</p>
             <RemoteByYear />
           </div>
         </div>
@@ -182,16 +187,15 @@ export const Home = () => {
           <div style={{ marginTop: '40px' }}>{getWordCloud()}</div>
         </div>
 
-        <div
-          ref={compRef}
-          style={{ marginTop: '40px' }}
-          className='section-text'
-        >
-          <h1 style={{ fontWeight: 'bold' }}>
+        <SectionDivider />
+
+        <div ref={compRef} style={{ marginTop: '40px' }}>
+          <h1 style={boldTextStyle}>
             What kind of compensation can you expect?
           </h1>
         </div>
         <TableauEmbed {...compensationVizProps} />
+        <Spacer height={80} />
       </div>
     </div>
   )
