@@ -2,9 +2,9 @@ export const RemoteByCountry = () => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     xmlnsXlink='http://www.w3.org/1999/xlink'
-    width={530.143}
-    height={491.872}
-    viewBox='0 0 397.608 368.904'
+    width={550.962}
+    height={517.042}
+    viewBox='0 0 413.221 387.782'
   >
     <defs>
       <style>{'*{stroke-linejoin:round;stroke-linecap:butt}'}</style>
@@ -12,7 +12,7 @@ export const RemoteByCountry = () => (
     <g id='figure_1'>
       <path
         id='patch_1'
-        d='M0 368.904h397.608V0H0z'
+        d='M0 387.782h413.221V0H0z'
         style={{
           fill: '#fff',
         }}
@@ -20,67 +20,53 @@ export const RemoteByCountry = () => (
       <g id='axes_1'>
         <path
           id='patch_2'
-          d='M33.288 273.312h357.12V7.2H33.288z'
+          d='M48.901 290.254h357.12V24.142H48.901z'
           style={{
-            fill: '#fff',
-          }}
-        />
-        <path
-          id='patch_3'
-          d='M77.927 273.312h89.28V119.88h-89.28z'
-          clipPath='url(#p8055af0f07)'
-          style={{
-            fill: '#1f77b4',
-          }}
-        />
-        <path
-          id='patch_4'
-          d='M256.488 273.312h89.28V44.492h-89.28z'
-          clipPath='url(#p8055af0f07)'
-          style={{
-            fill: '#1f77b4',
-          }}
-        />
-        <path
-          id='patch_5'
-          d='M77.927 119.88h89.28V19.872h-89.28z'
-          clipPath='url(#p8055af0f07)'
-          style={{
-            fill: '#ff7f0e',
-          }}
-        />
-        <path
-          id='patch_6'
-          d='M256.488 44.492h89.28v-24.62h-89.28z'
-          clipPath='url(#p8055af0f07)'
-          style={{
-            fill: '#ff7f0e',
+            fill: '#e5e5e5',
           }}
         />
         <g id='matplotlib.axis_1'>
           <g id='xtick_1'>
-            <g id='line2d_1'>
+            <path
+              id='line2d_1'
+              d='M138.181 290.254V24.142'
+              clipPath='url(#p91b8e733af)'
+              style={{
+                fill: 'none',
+                stroke: '#fff',
+                strokeWidth: 0.8,
+                strokeLinecap: 'square',
+              }}
+            />
+            <g id='line2d_2'>
               <defs>
                 <path
-                  id='m32cc8a099d'
+                  id='m6990c56fe7'
                   d='M0 0v3.5'
                   style={{
-                    stroke: '#000',
+                    stroke: '#555',
                     strokeWidth: 0.8,
                   }}
                 />
               </defs>
               <use
-                xlinkHref='#m32cc8a099d'
-                x={122.567}
-                y={273.312}
+                xlinkHref='#m6990c56fe7'
+                x={138.181}
+                y={290.254}
                 style={{
-                  stroke: '#000',
+                  fill: '#555',
+                  stroke: '#555',
                   strokeWidth: 0.8,
                 }}
               />
             </g>
-            <g id='text_1' transform='matrix(0 -.1 -.1 0 125.327 304.854)'>
+            <g
+              id='text_1'
+              style={{
+                fill: '#555',
+              }}
+              transform='matrix(0 -.1 -.1 0 140.94 321.796)'
+            >
               <defs>
                 <path
                   id='DejaVuSans-49'
@@ -116,17 +102,35 @@ export const RemoteByCountry = () => (
             </g>
           </g>
           <g id='xtick_2'>
-            <use
-              xlinkHref='#m32cc8a099d'
-              id='line2d_2'
-              x={301.127}
-              y={273.312}
+            <path
+              id='line2d_3'
+              d='M316.741 290.254V24.142'
+              clipPath='url(#p91b8e733af)'
               style={{
-                stroke: '#000',
+                fill: 'none',
+                stroke: '#fff',
+                strokeWidth: 0.8,
+                strokeLinecap: 'square',
+              }}
+            />
+            <use
+              xlinkHref='#m6990c56fe7'
+              id='line2d_4'
+              x={316.741}
+              y={290.254}
+              style={{
+                fill: '#555',
+                stroke: '#555',
                 strokeWidth: 0.8,
               }}
             />
-            <g id='text_2' transform='matrix(0 -.1 -.1 0 303.887 348.026)'>
+            <g
+              id='text_2'
+              style={{
+                fill: '#555',
+              }}
+              transform='matrix(0 -.1 -.1 0 319.5 364.968)'
+            >
               <defs>
                 <path
                   id='DejaVuSans-55'
@@ -169,7 +173,13 @@ export const RemoteByCountry = () => (
               <use xlinkHref='#DejaVuSans-73' x={625.049} />
             </g>
           </g>
-          <g id='text_3' transform='matrix(.1 0 0 -.1 191.984 359.625)'>
+          <g
+            id='text_3'
+            style={{
+              fill: '#555',
+            }}
+            transform='matrix(.12 0 0 -.12 203.625 378.086)'
+          >
             <defs>
               <path
                 id='DejaVuSans-43'
@@ -208,28 +218,46 @@ export const RemoteByCountry = () => (
         </g>
         <g id='matplotlib.axis_2'>
           <g id='ytick_1'>
-            <g id='line2d_3'>
+            <path
+              id='line2d_5'
+              d='M48.901 290.254h357.12'
+              clipPath='url(#p91b8e733af)'
+              style={{
+                fill: 'none',
+                stroke: '#fff',
+                strokeWidth: 0.8,
+                strokeLinecap: 'square',
+              }}
+            />
+            <g id='line2d_6'>
               <defs>
                 <path
-                  id='mc9b71a30f7'
+                  id='m7fec24cd27'
                   d='M0 0h-3.5'
                   style={{
-                    stroke: '#000',
+                    stroke: '#555',
                     strokeWidth: 0.8,
                   }}
                 />
               </defs>
               <use
-                xlinkHref='#mc9b71a30f7'
-                x={33.288}
-                y={273.312}
+                xlinkHref='#m7fec24cd27'
+                x={48.901}
+                y={290.254}
                 style={{
-                  stroke: '#000',
+                  fill: '#555',
+                  stroke: '#555',
                   strokeWidth: 0.8,
                 }}
               />
             </g>
-            <g id='text_4' transform='matrix(.1 0 0 -.1 19.925 277.111)'>
+            <g
+              id='text_4'
+              style={{
+                fill: '#555',
+              }}
+              transform='matrix(.1 0 0 -.1 35.539 294.053)'
+            >
               <defs>
                 <path
                   id='DejaVuSans-30'
@@ -241,17 +269,35 @@ export const RemoteByCountry = () => (
             </g>
           </g>
           <g id='ytick_2'>
-            <use
-              xlinkHref='#mc9b71a30f7'
-              id='line2d_4'
-              x={33.288}
-              y={222.624}
+            <path
+              id='line2d_7'
+              d='M48.901 239.566h357.12'
+              clipPath='url(#p91b8e733af)'
               style={{
-                stroke: '#000',
+                fill: 'none',
+                stroke: '#fff',
+                strokeWidth: 0.8,
+                strokeLinecap: 'square',
+              }}
+            />
+            <use
+              xlinkHref='#m7fec24cd27'
+              id='line2d_8'
+              x={48.901}
+              y={239.566}
+              style={{
+                fill: '#555',
+                stroke: '#555',
                 strokeWidth: 0.8,
               }}
             />
-            <g id='text_5' transform='matrix(.1 0 0 -.1 13.563 226.423)'>
+            <g
+              id='text_5'
+              style={{
+                fill: '#555',
+              }}
+              transform='matrix(.1 0 0 -.1 29.176 243.365)'
+            >
               <defs>
                 <path
                   id='DejaVuSans-32'
@@ -264,17 +310,35 @@ export const RemoteByCountry = () => (
             </g>
           </g>
           <g id='ytick_3'>
-            <use
-              xlinkHref='#mc9b71a30f7'
-              id='line2d_5'
-              x={33.288}
-              y={171.936}
+            <path
+              id='line2d_9'
+              d='M48.901 188.878h357.12'
+              clipPath='url(#p91b8e733af)'
               style={{
-                stroke: '#000',
+                fill: 'none',
+                stroke: '#fff',
+                strokeWidth: 0.8,
+                strokeLinecap: 'square',
+              }}
+            />
+            <use
+              xlinkHref='#m7fec24cd27'
+              id='line2d_10'
+              x={48.901}
+              y={188.878}
+              style={{
+                fill: '#555',
+                stroke: '#555',
                 strokeWidth: 0.8,
               }}
             />
-            <g id='text_6' transform='matrix(.1 0 0 -.1 13.563 175.735)'>
+            <g
+              id='text_6'
+              style={{
+                fill: '#555',
+              }}
+              transform='matrix(.1 0 0 -.1 29.176 192.677)'
+            >
               <defs>
                 <path
                   id='DejaVuSans-34'
@@ -287,17 +351,35 @@ export const RemoteByCountry = () => (
             </g>
           </g>
           <g id='ytick_4'>
-            <use
-              xlinkHref='#mc9b71a30f7'
-              id='line2d_6'
-              x={33.288}
-              y={121.248}
+            <path
+              id='line2d_11'
+              d='M48.901 138.19h357.12'
+              clipPath='url(#p91b8e733af)'
               style={{
-                stroke: '#000',
+                fill: 'none',
+                stroke: '#fff',
+                strokeWidth: 0.8,
+                strokeLinecap: 'square',
+              }}
+            />
+            <use
+              xlinkHref='#m7fec24cd27'
+              id='line2d_12'
+              x={48.901}
+              y={138.19}
+              style={{
+                fill: '#555',
+                stroke: '#555',
                 strokeWidth: 0.8,
               }}
             />
-            <g id='text_7' transform='matrix(.1 0 0 -.1 13.563 125.047)'>
+            <g
+              id='text_7'
+              style={{
+                fill: '#555',
+              }}
+              transform='matrix(.1 0 0 -.1 29.176 141.989)'
+            >
               <defs>
                 <path
                   id='DejaVuSans-36'
@@ -310,17 +392,35 @@ export const RemoteByCountry = () => (
             </g>
           </g>
           <g id='ytick_5'>
-            <use
-              xlinkHref='#mc9b71a30f7'
-              id='line2d_7'
-              x={33.288}
-              y={70.56}
+            <path
+              id='line2d_13'
+              d='M48.901 87.502h357.12'
+              clipPath='url(#p91b8e733af)'
               style={{
-                stroke: '#000',
+                fill: 'none',
+                stroke: '#fff',
+                strokeWidth: 0.8,
+                strokeLinecap: 'square',
+              }}
+            />
+            <use
+              xlinkHref='#m7fec24cd27'
+              id='line2d_14'
+              x={48.901}
+              y={87.502}
+              style={{
+                fill: '#555',
+                stroke: '#555',
                 strokeWidth: 0.8,
               }}
             />
-            <g id='text_8' transform='matrix(.1 0 0 -.1 13.563 74.36)'>
+            <g
+              id='text_8'
+              style={{
+                fill: '#555',
+              }}
+              transform='matrix(.1 0 0 -.1 29.176 91.301)'
+            >
               <defs>
                 <path
                   id='DejaVuSans-38'
@@ -333,17 +433,35 @@ export const RemoteByCountry = () => (
             </g>
           </g>
           <g id='ytick_6'>
-            <use
-              xlinkHref='#mc9b71a30f7'
-              id='line2d_8'
-              x={33.288}
-              y={19.872}
+            <path
+              id='line2d_15'
+              d='M48.901 36.814h357.12'
+              clipPath='url(#p91b8e733af)'
               style={{
-                stroke: '#000',
+                fill: 'none',
+                stroke: '#fff',
+                strokeWidth: 0.8,
+                strokeLinecap: 'square',
+              }}
+            />
+            <use
+              xlinkHref='#m7fec24cd27'
+              id='line2d_16'
+              x={48.901}
+              y={36.814}
+              style={{
+                fill: '#555',
+                stroke: '#555',
                 strokeWidth: 0.8,
               }}
             />
-            <g id='text_9' transform='matrix(.1 0 0 -.1 7.2 23.671)'>
+            <g
+              id='text_9'
+              style={{
+                fill: '#555',
+              }}
+              transform='matrix(.1 0 0 -.1 22.814 40.613)'
+            >
               <defs>
                 <path
                   id='DejaVuSans-31'
@@ -356,130 +474,231 @@ export const RemoteByCountry = () => (
               <use xlinkHref='#DejaVuSans-30' x={127.246} />
             </g>
           </g>
+          <g
+            id='text_10'
+            style={{
+              fill: '#555',
+            }}
+            transform='matrix(0 -.12 -.12 0 16.318 179.767)'
+          >
+            <defs>
+              <path
+                id='DejaVuSans-50'
+                d='M1259 4147V2394h794q441 0 681 228 241 228 241 650 0 419-241 647-240 228-681 228h-794zm-631 519h1425q785 0 1186-355 402-355 402-1039 0-691-402-1044-401-353-1186-353h-794V0H628v4666z'
+                transform='scale(.01563)'
+              />
+              <path
+                id='DejaVuSans-63'
+                d='M3122 3366v-538q-244 135-489 202t-495 67q-560 0-870-355-309-354-309-995t309-996q310-354 870-354 250 0 495 67t489 202V134Q2881 22 2623-34q-257-57-548-57-791 0-1257 497-465 497-465 1341 0 856 470 1346 471 491 1290 491 265 0 518-55 253-54 491-163z'
+                transform='scale(.01563)'
+              />
+            </defs>
+            <use xlinkHref='#DejaVuSans-50' />
+            <use xlinkHref='#DejaVuSans-65' x={56.678} />
+            <use xlinkHref='#DejaVuSans-72' x={118.201} />
+            <use xlinkHref='#DejaVuSans-63' x={157.064} />
+            <use xlinkHref='#DejaVuSans-65' x={212.045} />
+            <use xlinkHref='#DejaVuSans-6e' x={273.568} />
+            <use xlinkHref='#DejaVuSans-74' x={336.947} />
+          </g>
         </g>
         <path
+          id='patch_3'
+          d='M93.541 290.254h89.28v-151.29h-89.28z'
+          clipPath='url(#p91b8e733af)'
+          style={{
+            fill: 'red',
+          }}
+        />
+        <path
+          id='patch_4'
+          d='M272.101 290.254h89.28V63.769h-89.28z'
+          clipPath='url(#p91b8e733af)'
+          style={{
+            fill: 'red',
+          }}
+        />
+        <path
+          id='patch_5'
+          d='M93.541 138.963h89.28V36.813h-89.28z'
+          clipPath='url(#p91b8e733af)'
+          style={{
+            fill: '#00f',
+          }}
+        />
+        <path
+          id='patch_6'
+          d='M272.101 63.769h89.28V36.814h-89.28z'
+          clipPath='url(#p91b8e733af)'
+          style={{
+            fill: '#00f',
+          }}
+        />
+        <path
           id='patch_7'
-          d='M33.288 273.312V7.2'
+          d='M48.901 290.254V24.142'
           style={{
             fill: 'none',
-            stroke: '#000',
-            strokeWidth: 0.8,
+            stroke: '#fff',
             strokeLinejoin: 'miter',
             strokeLinecap: 'square',
           }}
         />
         <path
           id='patch_8'
-          d='M390.408 273.312V7.2'
+          d='M406.021 290.254V24.142'
           style={{
             fill: 'none',
-            stroke: '#000',
-            strokeWidth: 0.8,
+            stroke: '#fff',
             strokeLinejoin: 'miter',
             strokeLinecap: 'square',
           }}
         />
         <path
           id='patch_9'
-          d='M33.288 273.312h357.12'
+          d='M48.901 290.254h357.12'
           style={{
             fill: 'none',
-            stroke: '#000',
-            strokeWidth: 0.8,
+            stroke: '#fff',
             strokeLinejoin: 'miter',
             strokeLinecap: 'square',
           }}
         />
         <path
           id='patch_10'
-          d='M33.288 7.2h357.12'
+          d='M48.901 24.142h357.12'
           style={{
             fill: 'none',
-            stroke: '#000',
-            strokeWidth: 0.8,
+            stroke: '#fff',
             strokeLinejoin: 'miter',
             strokeLinecap: 'square',
           }}
         />
+        <g id='text_11' transform='matrix(.144 0 0 -.144 87.413 18.142)'>
+          <defs>
+            <path
+              id='DejaVuSans-52'
+              d='M2841 2188q203-69 395-294t386-619L4263 0h-679l-596 1197q-232 469-449 622t-592 153h-688V0H628v4666h1425q800 0 1194-335 394-334 394-1009 0-441-205-732-205-290-595-402zM1259 4147V2491h794q456 0 689 211t233 620q0 409-233 617t-689 208h-794z'
+              transform='scale(.01563)'
+            />
+            <path
+              id='DejaVuSans-6d'
+              d='M3328 2828q216 388 516 572t706 184q547 0 844-383 297-382 297-1088V0h-578v2094q0 503-179 746-178 244-543 244-447 0-707-297-259-296-259-809V0h-578v2094q0 506-178 748t-550 242q-441 0-701-298-259-298-259-808V0H581v3500h578v-544q197 322 472 475t653 153q382 0 649-194 267-193 395-562z'
+              transform='scale(.01563)'
+            />
+            <path
+              id='DejaVuSans-76'
+              d='M191 3500h609L1894 563l1094 2937h609L2284 0h-781L191 3500z'
+              transform='scale(.01563)'
+            />
+            <path
+              id='DejaVuSans-2e'
+              d='M684 794h660V0H684v794z'
+              transform='scale(.01563)'
+            />
+            <path
+              id='DejaVuSans-6a'
+              d='M603 3500h575V-63q0-668-255-968-254-300-820-300h-219v487H38q328 0 446 152Q603-541 603-63v3563zm0 1363h575v-729H603v729z'
+              transform='scale(.01563)'
+            />
+            <path
+              id='DejaVuSans-62'
+              d='M3116 1747q0 634-261 995t-717 361q-457 0-718-361t-261-995q0-634 261-995t718-361q456 0 717 361t261 995zM1159 2969q182 312 458 463 277 152 661 152 638 0 1036-506 399-506 399-1331T3314 415Q2916-91 2278-91q-384 0-661 152-276 152-458 464V0H581v4863h578V2969z'
+              transform='scale(.01563)'
+            />
+          </defs>
+          <use xlinkHref='#DejaVuSans-52' />
+          <use xlinkHref='#DejaVuSans-65' x={64.982} />
+          <use xlinkHref='#DejaVuSans-6d' x={126.506} />
+          <use xlinkHref='#DejaVuSans-6f' x={223.918} />
+          <use xlinkHref='#DejaVuSans-74' x={285.1} />
+          <use xlinkHref='#DejaVuSans-65' x={324.309} />
+          <use xlinkHref='#DejaVuSans-20' x={385.832} />
+          <use xlinkHref='#DejaVuSans-76' x={417.619} />
+          <use xlinkHref='#DejaVuSans-73' x={476.799} />
+          <use xlinkHref='#DejaVuSans-2e' x={528.898} />
+          <use xlinkHref='#DejaVuSans-20' x={560.686} />
+          <use xlinkHref='#DejaVuSans-6e' x={592.473} />
+          <use xlinkHref='#DejaVuSans-6f' x={655.852} />
+          <use xlinkHref='#DejaVuSans-6e' x={717.033} />
+          <use xlinkHref='#DejaVuSans-72' x={780.412} />
+          <use xlinkHref='#DejaVuSans-65' x={819.275} />
+          <use xlinkHref='#DejaVuSans-6d' x={880.799} />
+          <use xlinkHref='#DejaVuSans-6f' x={978.211} />
+          <use xlinkHref='#DejaVuSans-74' x={1039.393} />
+          <use xlinkHref='#DejaVuSans-65' x={1078.602} />
+          <use xlinkHref='#DejaVuSans-20' x={1140.125} />
+          <use xlinkHref='#DejaVuSans-6a' x={1171.912} />
+          <use xlinkHref='#DejaVuSans-6f' x={1199.695} />
+          <use xlinkHref='#DejaVuSans-62' x={1260.877} />
+          <use xlinkHref='#DejaVuSans-73' x={1324.354} />
+          <use xlinkHref='#DejaVuSans-20' x={1376.453} />
+          <use xlinkHref='#DejaVuSans-62' x={1408.24} />
+          <use xlinkHref='#DejaVuSans-79' x={1471.717} />
+          <use xlinkHref='#DejaVuSans-20' x={1530.896} />
+          <use xlinkHref='#DejaVuSans-63' x={1562.684} />
+          <use xlinkHref='#DejaVuSans-6f' x={1617.664} />
+          <use xlinkHref='#DejaVuSans-75' x={1678.846} />
+          <use xlinkHref='#DejaVuSans-6e' x={1742.225} />
+          <use xlinkHref='#DejaVuSans-74' x={1805.604} />
+          <use xlinkHref='#DejaVuSans-72' x={1844.813} />
+          <use xlinkHref='#DejaVuSans-79' x={1885.926} />
+        </g>
         <g id='legend_1'>
           <path
             id='patch_11'
-            d='M170.12 268.312h83.455q2 0 2-2v-43.313q0-2-2-2H170.12q-2 0-2 2v43.313q0 2 2 2z'
+            d='M203.389 285.254h48.145q2 0 2-2v-28.357q0-2-2-2h-48.145q-2 0-2 2v28.357q0 2 2 2z'
             style={{
-              fill: '#fff',
+              fill: '#e5e5e5',
               opacity: 0.8,
               stroke: '#ccc',
+              strokeWidth: 0.5,
               strokeLinejoin: 'miter',
             }}
           />
-          <g id='text_10' transform='matrix(.1 0 0 -.1 172.12 232.598)'>
+          <path
+            id='patch_12'
+            d='M205.389 264.496h20v-7h-20z'
+            style={{
+              fill: 'red',
+            }}
+          />
+          <g id='text_12' transform='matrix(.1 0 0 -.1 233.389 264.496)'>
             <defs>
               <path
-                id='DejaVuSans-6d'
-                d='M3328 2828q216 388 516 572t706 184q547 0 844-383 297-382 297-1088V0h-578v2094q0 503-179 746-178 244-543 244-447 0-707-297-259-296-259-809V0h-578v2094q0 506-178 748t-550 242q-441 0-701-298-259-298-259-808V0H581v3500h578v-544q197 322 472 475t653 153q382 0 649-194 267-193 395-562z'
-                transform='scale(.01563)'
-              />
-              <path
-                id='DejaVuSans-5f'
-                d='M3263-1063v-446H-63v446h3326z'
-                transform='scale(.01563)'
-              />
-              <path
-                id='DejaVuSans-6c'
-                d='M603 4863h575V0H603v4863z'
-                transform='scale(.01563)'
-              />
-              <path
-                id='DejaVuSans-77'
-                d='M269 3500h575l719-2731 715 2731h678l719-2731 716 2731h575L4050 0h-678l-753 2869L1863 0h-679L269 3500z'
+                id='DejaVuSans-4e'
+                d='M628 4666h850L3547 763v3903h612V0h-850L1241 3903V0H628v4666z'
                 transform='scale(.01563)'
               />
             </defs>
-            <use xlinkHref='#DejaVuSans-72' />
-            <use xlinkHref='#DejaVuSans-65' x={38.863} />
-            <use xlinkHref='#DejaVuSans-6d' x={100.387} />
-            <use xlinkHref='#DejaVuSans-6f' x={197.799} />
-            <use xlinkHref='#DejaVuSans-74' x={258.98} />
-            <use xlinkHref='#DejaVuSans-65' x={298.189} />
-            <use xlinkHref='#DejaVuSans-5f' x={359.713} />
-            <use xlinkHref='#DejaVuSans-61' x={409.713} />
-            <use xlinkHref='#DejaVuSans-6c' x={470.992} />
-            <use xlinkHref='#DejaVuSans-6c' x={498.775} />
-            <use xlinkHref='#DejaVuSans-6f' x={526.559} />
-            <use xlinkHref='#DejaVuSans-77' x={587.74} />
-            <use xlinkHref='#DejaVuSans-65' x={669.527} />
-            <use xlinkHref='#DejaVuSans-64' x={731.051} />
+            <use xlinkHref='#DejaVuSans-4e' />
+            <use xlinkHref='#DejaVuSans-6f' x={74.805} />
           </g>
           <path
-            id='patch_12'
-            d='M194.666 247.554h20v-7h-20z'
-            style={{
-              fill: '#1f77b4',
-            }}
-          />
-          <use
-            xlinkHref='#DejaVuSans-30'
-            id='text_11'
-            transform='matrix(.1 0 0 -.1 222.666 247.554)'
-          />
-          <path
             id='patch_13'
-            d='M194.666 262.232h20v-7h-20z'
+            d='M205.389 279.174h20v-7h-20z'
             style={{
-              fill: '#ff7f0e',
+              fill: '#00f',
             }}
           />
-          <use
-            xlinkHref='#DejaVuSans-31'
-            id='text_12'
-            transform='matrix(.1 0 0 -.1 222.666 262.232)'
-          />
+          <g id='text_13' transform='matrix(.1 0 0 -.1 233.389 279.174)'>
+            <defs>
+              <path
+                id='DejaVuSans-59'
+                d='M-13 4666h679l1293-1919 1285 1919h678L2272 2222V0h-634v2222L-13 4666z'
+                transform='scale(.01563)'
+              />
+            </defs>
+            <use xlinkHref='#DejaVuSans-59' />
+            <use xlinkHref='#DejaVuSans-65' x={47.834} />
+            <use xlinkHref='#DejaVuSans-73' x={109.357} />
+          </g>
         </g>
       </g>
     </g>
     <defs>
-      <clipPath id='p8055af0f07'>
-        <path d='M33.288 7.2h357.12v266.112H33.288z' />
+      <clipPath id='p91b8e733af'>
+        <path d='M48.901 24.142h357.12v266.112H48.901z' />
       </clipPath>
     </defs>
   </svg>
