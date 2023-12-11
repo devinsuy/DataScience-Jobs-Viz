@@ -25,11 +25,11 @@ const boldTextStyle = {
 
 const sectionHeadingStyle = {
   fontWeight: 'bold',
-  fontSize: '1.2em',
-  marginBottom: '20px',
+  fontSize: '2em',
+  marginBottom: '40px',
+  borderBottom: '1px solid #000',
+  display: 'inline-block',
 }
-
-const sectionContainerStyle = {} as any
 
 export const Home = () => {
   const compensationVizProps: TableauEmbedProps = {
@@ -150,7 +150,6 @@ export const Home = () => {
   return (
     <div className='main-container'>
       <NavHeader {...{ compRef, locRef, remoteRef, titleRef }} />
-
       <div className='main-content'>
         <Spacer height={40} />
         <div>
@@ -165,9 +164,11 @@ export const Home = () => {
         <SectionDivider />
 
         <Spacer height={20} />
-        <div ref={locRef} style={sectionContainerStyle}>
+        <div>
+          <p ref={locRef} style={sectionHeadingStyle}>
+            Location
+          </p>
           <div>
-            <a href='#Location' />
             <h1 style={boldTextStyle}>Where are you located?</h1>
           </div>
           <TableauEmbed {...locationVizProps} />
@@ -177,8 +178,11 @@ export const Home = () => {
         <SectionDivider />
         <Spacer height={20} />
 
-        <div ref={titleRef}>
+        <div>
           <div>
+            <p ref={titleRef} style={sectionHeadingStyle}>
+              Job Title
+            </p>
             <h1 style={boldTextStyle}>
               What kind of job title can you expect?
             </h1>
@@ -190,8 +194,11 @@ export const Home = () => {
         <SectionDivider />
         <Spacer height={20} />
 
-        <div ref={remoteRef}>
+        <div>
           <div>
+            <p ref={remoteRef} style={sectionHeadingStyle}>
+              Remote
+            </p>
             <h1 style={boldTextStyle}>Is remote work important to you?</h1>
             <Spacer height={20} />
           </div>
@@ -239,7 +246,10 @@ export const Home = () => {
 
         <SectionDivider />
 
-        <div ref={compRef} style={{ marginTop: '40px' }}>
+        <div style={{ marginTop: '40px' }}>
+          <p ref={compRef} style={sectionHeadingStyle}>
+            Compensation
+          </p>
           <h1 style={boldTextStyle}>
             What kind of compensation can you expect?
           </h1>

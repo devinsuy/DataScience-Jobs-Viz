@@ -11,6 +11,7 @@ import Avatar from '@mui/material/Avatar'
 import Button from '@mui/material/Button'
 import MenuItem from '@mui/material/MenuItem'
 import DataThresholdingIcon from '@mui/icons-material/DataThresholding'
+import { TooltipOnLoad } from 'views/ToolTipOnLoad'
 
 const pages = ['Location', 'Job Title', 'Remote', 'Compensation']
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout']
@@ -48,7 +49,11 @@ export const NavHeader = (refProps: SectionRef) => {
       ref = refProps.titleRef
     }
     if (ref.current) {
-      ref.current.scrollIntoView({ block: 'start', behavior: 'smooth', inline: 'nearest' })
+      ref.current.scrollIntoView({
+        block: 'start',
+        behavior: 'smooth',
+        inline: 'nearest',
+      })
     }
     handleCloseNavMenu()
   }
@@ -112,9 +117,12 @@ export const NavHeader = (refProps: SectionRef) => {
               }}
             >
               {pages.map(page => (
-                <MenuItem key={page} onClick={() => {
-                  handleScroll(page)
-                }}>
+                <MenuItem
+                  key={page}
+                  onClick={() => {
+                    handleScroll(page)
+                  }}
+                >
                   <Typography textAlign='center'>{page}</Typography>
                 </MenuItem>
               ))}
@@ -141,6 +149,7 @@ export const NavHeader = (refProps: SectionRef) => {
           >
             DATA SCIENCE
           </Typography>
+          <TooltipOnLoad message='Tip: Click the nav bar to jump directly to a section' />
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map(page => (
               <Button
