@@ -8,7 +8,7 @@ export const CloudCountryIndia = ({ isAlone }: { isAlone?: boolean }) => {
       width={isAlone ?? false ? '50%' : '100%'}
       height={isAlone ?? false ? '50%' : '100%'}
       viewBox='0 0 590.4 244.8'
-      style={isAlone ?? false ? { border: '2px solid #000' } : {}}
+      style={isAlone ?? false ? { border: '1px solid #000' } : {}}
     >
       <defs>
         <style>{'*{stroke-linejoin:round;stroke-linecap:butt}'}</style>

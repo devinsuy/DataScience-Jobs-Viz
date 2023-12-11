@@ -23,14 +23,14 @@ export const AllCloudPlots = (): React.ReactElement => {
     marginBottom: '40px',
   }
 
-  const rowItemStyle = { height: '50%', width: '50%', border: '2px solid #000' }
+  const rowItemStyle = { height: '50%', width: '50%', border: '1px solid #000' }
 
   return (
     <div>
       <div
         style={{
           marginTop: '40px',
-          border: '2px solid #000',
+          border: '1px solid #000',
         }}
       >
         <p style={headingStyle}>All Listings</p>
