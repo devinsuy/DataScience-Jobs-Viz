@@ -1,9 +1,10 @@
-export const RemoteByJob = () => (
+export const RemoteByJob = ({ isAlone }: { isAlone?: boolean }) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     xmlnsXlink='http://www.w3.org/1999/xlink'
-    width={550.962}
-    height={631.442}
+    width={isAlone ?? false ? '50%' : '50%'}
+    height={isAlone ?? false ? '50%' : '50%'}
+    style={isAlone ?? false ? { border: '1px solid #000' } : {}}
     viewBox='0 0 413.221 473.582'
   >
     <defs>

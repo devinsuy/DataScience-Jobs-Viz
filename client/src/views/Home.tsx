@@ -8,12 +8,16 @@ import {
   CloudRemoteAllowedNo,
   CloudRemoteAllowedYes,
   JobDesc,
-  RemoteByCountry,
-  RemoteByYear,
 } from './remote/plots'
 import { DropdownSelect } from './DropdownSelect'
 import { AllCloudPlots } from './remote/plots/wordCloud/AllCloudPlots'
 import { SectionDivider, Spacer } from './UtilComponents'
+import {
+  AllRemoteByPlots,
+  RemoteByCountry,
+  RemoteByJob,
+  RemoteByYear,
+} from './remote/plots/RemoteBy'
 
 const boldTextStyle = {
   fontWeight: 'bold',
@@ -48,7 +52,7 @@ export const Home = () => {
   const titleRef = useRef<HTMLDivElement>(null)
 
   // Conditionally select which word cloud type to render
-  const options = [
+  const optionsCloud = [
     'Show All Plots',
     'Unfiltered Data',
     'United States',
@@ -56,6 +60,13 @@ export const Home = () => {
     'Remote Allowed',
     'Remote Not Allowed',
   ]
+  const optionsRemotePlot = [
+    'Show All Plots',
+    'By Year',
+    'By Country',
+    'By Job Title',
+  ]
+
   type WordCloudEnum =
     | 'Show All Plots'
     | 'India'
@@ -63,7 +74,16 @@ export const Home = () => {
     | 'Unfiltered Data'
     | 'Remote Allowed'
     | 'Remote Not Allowed'
+
+  type RemotePlotEnum =
+    | 'Show All Plots'
+    | 'By Country'
+    | 'By Year'
+    | 'By Job Title'
+
   const [cloudType, setCloudType] = useState<WordCloudEnum>('Show All Plots')
+  const [remotePlotType, setRemotePlotType] =
+    useState<RemotePlotEnum>('Show All Plots')
 
   const getWordCloud = (): React.ReactElement => {
     switch (cloudType) {
@@ -99,6 +119,31 @@ export const Home = () => {
         )
       case 'Show All Plots':
         return <AllCloudPlots />
+    }
+  }
+
+  const getRemotePlot = (): React.ReactElement => {
+    switch (remotePlotType) {
+      case 'By Country':
+        return (
+          <div>
+            <RemoteByCountry isAlone />
+          </div>
+        )
+      case 'By Year':
+        return (
+          <div>
+            <RemoteByYear isAlone />
+          </div>
+        )
+      case 'By Job Title':
+        return (
+          <div>
+            <RemoteByJob isAlone />
+          </div>
+        )
+      case 'Show All Plots':
+        return <AllRemoteByPlots />
     }
   }
 
@@ -152,15 +197,19 @@ export const Home = () => {
           </div>
         </div>
 
-        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-          <div>
-            <p style={sectionHeadingStyle}>Remote Work By Country</p>
-            <RemoteByCountry />
+        <div style={{ marginTop: '20px' }}>
+          <div style={{ marginBottom: '20px' }}>
+            <p style={{ fontSize: '1.2em' }}>Select a filter:</p>
           </div>
-          <div>
-            <p style={sectionHeadingStyle}>Remote Work By Year</p>
-            <RemoteByYear />
-          </div>
+          <DropdownSelect
+            options={optionsRemotePlot}
+            onChange={(selectedOption: string) => {
+              setRemotePlotType(selectedOption as RemotePlotEnum)
+            }}
+            initValue='Show All Plots'
+          />
+          <Spacer height={20} />
+          <div style={{ marginTop: '40px' }}>{getRemotePlot()}</div>
         </div>
 
         <div style={{ marginTop: '60px', marginBottom: '20px' }}>
@@ -179,10 +228,11 @@ export const Home = () => {
             <p style={{ fontSize: '1.2em' }}>Select a filter:</p>
           </div>
           <DropdownSelect
-            options={options}
+            options={optionsCloud}
             onChange={(selectedOption: string) => {
               setCloudType(selectedOption as WordCloudEnum)
             }}
+            initValue='Show All Plots'
           />
           <div style={{ marginTop: '40px' }}>{getWordCloud()}</div>
         </div>
@@ -193,6 +243,7 @@ export const Home = () => {
           <h1 style={boldTextStyle}>
             What kind of compensation can you expect?
           </h1>
+          <Spacer height={20} />
         </div>
         <TableauEmbed {...compensationVizProps} />
         <Spacer height={80} />
