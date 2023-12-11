@@ -7,13 +7,12 @@ import {
   CloudCountryUS,
   CloudRemoteAllowedNo,
   CloudRemoteAllowedYes,
-  CountryCounts,
   JobDesc,
-  RemoteAllowedCounts,
   RemoteByCountry,
   RemoteByYear,
 } from './remote/plots'
 import { DropdownSelect } from './DropdownSelect'
+import { AllCloudPlots } from './remote/plots/wordCloud/AllCloudPlots'
 
 export const Home = () => {
   const compensationVizProps: TableauEmbedProps = {
@@ -37,32 +36,56 @@ export const Home = () => {
 
   // Conditionally select which word cloud type to render
   const options = [
-    'All Job Listings',
+    'Show All Plots',
+    'Unfiltered Data',
     'United States',
     'India',
     'Remote Allowed',
     'Remote Not Allowed',
   ]
   type WordCloudEnum =
+    | 'Show All Plots'
     | 'India'
     | 'United States'
-    | 'All Job Listings'
+    | 'Unfiltered Data'
     | 'Remote Allowed'
     | 'Remote Not Allowed'
-  const [cloudType, setCloudType] = useState<WordCloudEnum>('All Job Listings')
+  const [cloudType, setCloudType] = useState<WordCloudEnum>('Show All Plots')
 
   const getWordCloud = (): React.ReactElement => {
     switch (cloudType) {
-      case 'All Job Listings':
-        return <JobDesc />
+      case 'Unfiltered Data':
+        return (
+          <div>
+            <JobDesc isAlone />
+          </div>
+        )
       case 'United States':
-        return <CloudCountryUS />
+        return (
+          <div>
+            <CloudCountryUS isAlone />
+          </div>
+        )
       case 'India':
-        return <CloudCountryIndia />
+        return (
+          <div>
+            <CloudCountryIndia isAlone />
+          </div>
+        )
       case 'Remote Allowed':
-        return <CloudRemoteAllowedYes />
+        return (
+          <div>
+            <CloudRemoteAllowedYes isAlone />
+          </div>
+        )
       case 'Remote Not Allowed':
-        return <CloudRemoteAllowedNo />
+        return (
+          <div>
+            <CloudRemoteAllowedNo isAlone />
+          </div>
+        )
+      case 'Show All Plots':
+        return <AllCloudPlots />
     }
   }
 
@@ -135,11 +158,11 @@ export const Home = () => {
           </div>
         </div>
 
-        <div style={{ marginTop: '20px' }}>
+        <div style={{ marginTop: '60px', marginBottom: '20px' }}>
           <p
             style={{
               fontWeight: 'bold',
-              fontSize: '1.2em',
+              fontSize: '2em',
               marginBottom: '20px',
             }}
           >
@@ -156,7 +179,7 @@ export const Home = () => {
               setCloudType(selectedOption as WordCloudEnum)
             }}
           />
-          <div style={{ marginTop: '20px' }}>{getWordCloud()}</div>
+          <div style={{ marginTop: '40px' }}>{getWordCloud()}</div>
         </div>
 
         <div

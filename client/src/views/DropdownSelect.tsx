@@ -8,8 +8,11 @@ interface DropdownProps {
   onChange: (selectedOption: string) => void
 }
 
-export const DropdownSelect: React.FC<DropdownProps> = ({ options, onChange }) => {
-  const [selectedOption, setSelectedOption] = useState<string>('All Job Listings')
+export const DropdownSelect: React.FC<DropdownProps> = ({
+  options,
+  onChange,
+}) => {
+  const [selectedOption, setSelectedOption] = useState<string>('Show All Plots')
 
   const handleChange = (event: SelectChangeEvent<string>) => {
     const value = event.target.value
@@ -26,7 +29,7 @@ export const DropdownSelect: React.FC<DropdownProps> = ({ options, onChange }) =
         displayEmpty
         inputProps={{ 'aria-label': 'Select Option' }}
       >
-        {options.map((option) => (
+        {options.map(option => (
           <MenuItem key={option} value={option}>
             {option}
           </MenuItem>
