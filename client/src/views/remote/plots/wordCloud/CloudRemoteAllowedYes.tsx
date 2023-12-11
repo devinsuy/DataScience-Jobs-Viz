@@ -44,7 +44,7 @@ export const CloudRemoteAllowedYes = ({ isAlone }: { isAlone?: boolean }) => {
   return isAlone
     ? (
     <div>
-      <p style={headingStyle}>Remote Allowed Listings</p>
+      <p style={headingStyle}>Remote Allowed</p>
       {img}
     </div>
       )

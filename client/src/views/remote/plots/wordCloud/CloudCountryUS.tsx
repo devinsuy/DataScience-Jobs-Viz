@@ -44,7 +44,7 @@ export const CloudCountryUS = ({ isAlone }: { isAlone?: boolean }) => {
   return isAlone
     ? (
     <div>
-      <p style={headingStyle}>US Job Listings</p>
+      <p style={headingStyle}>United States</p>
       {img}
     </div>
       )

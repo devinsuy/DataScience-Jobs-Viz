@@ -33,7 +33,7 @@ export const AllCloudPlots = (): React.ReactElement => {
           border: '2px solid #000',
         }}
       >
-        <p style={headingStyle}>Unfiltered Job Descriptions</p>
+        <p style={headingStyle}>All Listings</p>
         <JobDesc />
       </div>
       <div
@@ -46,22 +46,22 @@ export const AllCloudPlots = (): React.ReactElement => {
       >
         <div style={rowStyle}>
           <div style={rowItemStyle}>
-            <p style={headingStyle}>US Job Listings</p>
+            <p style={headingStyle}>United States</p>
             <CloudCountryUS />
           </div>
           <div style={rowItemStyle}>
-            <p style={headingStyle}>India Job Listings</p>
+            <p style={headingStyle}>India</p>
             <CloudCountryIndia />
           </div>
         </div>
 
         <div style={rowStyle}>
           <div style={rowItemStyle}>
-            <p style={headingStyle}>Remote Allowed Listings</p>
+            <p style={headingStyle}>Remote Allowed</p>
             <CloudRemoteAllowedYes />
           </div>
           <div style={rowItemStyle}>
-            <p style={headingStyle}>Remote Not Allowed Listings</p>
+            <p style={headingStyle}>Remote Not Allowed</p>
             <CloudRemoteAllowedNo />
           </div>
         </div>

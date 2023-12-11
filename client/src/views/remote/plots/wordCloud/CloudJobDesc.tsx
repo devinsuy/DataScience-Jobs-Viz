@@ -43,7 +43,7 @@ export const JobDesc = ({ isAlone }: { isAlone?: boolean }) => {
   return isAlone
     ? (
     <div>
-      <p style={headingStyle}>All Job Listings</p>
+      <p style={headingStyle}>All Listings</p>
       {img}
     </div>
       )
