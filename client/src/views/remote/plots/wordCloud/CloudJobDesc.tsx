@@ -5,8 +5,8 @@ export const JobDesc = ({ isAlone }: { isAlone?: boolean }) => {
     <svg
       xmlns='http://www.w3.org/2000/svg'
       xmlnsXlink='http://www.w3.org/1999/xlink'
-      width='50%'
-      height='50%'
+      width='35%'
+      height='35%'
       viewBox='0 0 590.4 244.8'
       style={isAlone ?? false ? { border: '1px solid #000' } : {}}
     >

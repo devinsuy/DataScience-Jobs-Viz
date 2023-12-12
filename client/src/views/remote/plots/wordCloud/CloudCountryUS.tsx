@@ -5,8 +5,8 @@ export const CloudCountryUS = ({ isAlone }: { isAlone?: boolean }) => {
     <svg
       xmlns='http://www.w3.org/2000/svg'
       xmlnsXlink='http://www.w3.org/1999/xlink'
-      width={isAlone ?? false ? '50%' : '100%'}
-      height={isAlone ?? false ? '50%' : '100%'}
+      width={isAlone ?? false ? '35%' : '70%'}
+      height={isAlone ?? false ? '35%' : '70%'}
       viewBox='0 0 590.4 244.8'
       style={isAlone ?? false ? { border: '1px solid #000' } : {}}
     >

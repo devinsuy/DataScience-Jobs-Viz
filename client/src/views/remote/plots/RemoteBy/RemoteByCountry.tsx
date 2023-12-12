@@ -2,8 +2,8 @@ export const RemoteByCountry = ({ isAlone }: { isAlone?: boolean }) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     xmlnsXlink='http://www.w3.org/1999/xlink'
-    width={isAlone ?? false ? '50%' : '50%'}
-    height={isAlone ?? false ? '50%' : '50%'}
+    width={isAlone ?? false ? '35%' : '35%'}
+    height={isAlone ?? false ? '35%' : '35%'}
     style={isAlone ?? false ? { border: '1px solid #000' } : {}}
     viewBox='0 0 413.221 387.782'
   >

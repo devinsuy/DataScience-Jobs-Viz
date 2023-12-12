@@ -23,7 +23,7 @@ export const AllCloudPlots = (): React.ReactElement => {
     marginBottom: '40px',
   }
 
-  const rowItemStyle = { height: '50%', width: '50%', border: '1px solid #000' }
+  const rowItemStyle = { height: '35%', width: '35%', border: '1px solid #000' }
 
   return (
     <div>
