@@ -256,7 +256,7 @@ export const Home = () => {
           <Spacer height={20} />
         </div>
         <TableauEmbed {...compensationVizProps} />
-        <Spacer height={80} />
+        <Spacer height={40} />
       </div>
     </div>
   )
