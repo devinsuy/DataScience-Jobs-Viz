@@ -22,7 +22,7 @@ export const TableauEmbed: React.FC<TableauEmbedProps> = (
     const options = {
       width: '100%',
       height: workbookUrl.startsWith('PercantageoflistingsbyJobTitle')
-        ? '800px'
+        ? '1200px'
         : '1000px',
     }
     const viz = new tableau.Viz(containerDiv, url, options)
