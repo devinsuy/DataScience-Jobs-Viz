@@ -16,7 +16,7 @@ export const TooltipOnLoad: React.FC<TooltipOnLoadProps> = ({ message }) => {
     // Close the tooltip after a certain delay (e.g., 3 seconds)
     const timeoutId = setTimeout(() => {
       setOpen(false)
-    }, 4000)
+    }, 4500)
 
     // Clear the timeout when the component is unmounted
     return () => {

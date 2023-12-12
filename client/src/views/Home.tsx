@@ -18,6 +18,7 @@ import {
   RemoteByJob,
   RemoteByYear,
 } from './remote/plots/RemoteBy'
+import { AboutPage } from './About'
 
 const boldTextStyle = {
   fontWeight: 'bold',
@@ -31,20 +32,22 @@ const sectionHeadingStyle = {
   display: 'inline-block',
 }
 
-export const Home = () => {
-  const compensationVizProps: TableauEmbedProps = {
-    workbookUrl: 'Compensation_17019148466490/Dashboard1',
-    newDataUrl: '',
-  }
+const compensationVizProps: TableauEmbedProps = {
+  workbookUrl: 'Compensation_17019148466490/Dashboard1',
+  newDataUrl: '',
+}
 
-  const locationVizProps: TableauEmbedProps = {
-    workbookUrl: 'DataScienceJobListingMap/Dashboard1',
-    newDataUrl: '',
-  }
-  const jobTitleVizProps: TableauEmbedProps = {
-    workbookUrl: 'PercantageoflistingsbyJobTitle/Dashboard1',
-    newDataUrl: '',
-  }
+const locationVizProps: TableauEmbedProps = {
+  workbookUrl: 'DataScienceJobListingMap/Dashboard1',
+  newDataUrl: '',
+}
+const jobTitleVizProps: TableauEmbedProps = {
+  workbookUrl: 'PercantageoflistingsbyJobTitle/Dashboard1',
+  newDataUrl: '',
+}
+
+export const Home = () => {
+  const [isOnAbout, setIsOnAbout] = useState(false)
 
   const compRef = useRef<HTMLDivElement>(null)
   const locRef = useRef<HTMLDivElement>(null)
@@ -147,116 +150,118 @@ export const Home = () => {
     }
   }
 
+  const VizComponent = (
+    <>
+      <Spacer height={40} />
+      <div>
+        <h1 style={boldTextStyle}>Interested in data science?</h1>
+        {/* eslint-disable react/no-unescaped-entities */}
+        <p style={{ fontSize: '1.2em' }}>
+          We'll help you understand the industry and find the job that's right
+          for you.
+        </p>
+      </div>
+      <Spacer height={20} />
+      <SectionDivider />
+
+      <Spacer height={20} />
+      <div>
+        <p ref={locRef} style={sectionHeadingStyle}>
+          Location
+        </p>
+        <div>
+          <h1 style={boldTextStyle}>Where are you located?</h1>
+        </div>
+        <TableauEmbed {...locationVizProps} />
+      </div>
+
+      <Spacer height={40} />
+      <SectionDivider />
+      <Spacer height={20} />
+
+      <div>
+        <div>
+          <p ref={titleRef} style={sectionHeadingStyle}>
+            Job Title
+          </p>
+          <h1 style={boldTextStyle}>What kind of job title can you expect?</h1>
+        </div>
+        <Spacer height={40} />
+        <TableauEmbed {...jobTitleVizProps} />
+      </div>
+      <Spacer height={40} />
+      <SectionDivider />
+      <Spacer height={20} />
+
+      <div>
+        <div>
+          <p ref={remoteRef} style={sectionHeadingStyle}>
+            Remote
+          </p>
+          <h1 style={boldTextStyle}>Is remote work important to you?</h1>
+          <Spacer height={20} />
+        </div>
+      </div>
+
+      <div style={{ marginTop: '20px' }}>
+        <div style={{ marginBottom: '20px' }}>
+          <p style={{ fontSize: '1.2em' }}>Select a filter:</p>
+        </div>
+        <DropdownSelect
+          options={optionsRemotePlot}
+          onChange={(selectedOption: string) => {
+            setRemotePlotType(selectedOption as RemotePlotEnum)
+          }}
+          initValue='Show All Plots'
+        />
+        <Spacer height={20} />
+        <div style={{ marginTop: '40px' }}>{getRemotePlot()}</div>
+      </div>
+
+      <div style={{ marginTop: '60px', marginBottom: '20px' }}>
+        <p
+          style={{
+            fontWeight: 'bold',
+            fontSize: '2em',
+            marginBottom: '20px',
+          }}
+        >
+          Words most commonly mentioned in job descriptions
+        </p>
+      </div>
+      <div style={{ marginTop: '20px' }}>
+        <div style={{ marginBottom: '20px' }}>
+          <p style={{ fontSize: '1.2em' }}>Select a filter:</p>
+        </div>
+        <DropdownSelect
+          options={optionsCloud}
+          onChange={(selectedOption: string) => {
+            setCloudType(selectedOption as WordCloudEnum)
+          }}
+          initValue='Show All Plots'
+        />
+        <div style={{ marginTop: '40px' }}>{getWordCloud()}</div>
+      </div>
+
+      <SectionDivider />
+
+      <div style={{ marginTop: '40px' }}>
+        <p ref={compRef} style={sectionHeadingStyle}>
+          Compensation
+        </p>
+        <h1 style={boldTextStyle}>What kind of compensation can you expect?</h1>
+        <Spacer height={20} />
+      </div>
+      <TableauEmbed {...compensationVizProps} />
+      <Spacer height={40} />
+    </>
+  )
+
   return (
     <div className='main-container'>
-      <NavHeader {...{ compRef, locRef, remoteRef, titleRef }} />
+      <NavHeader {...{ compRef, locRef, remoteRef, titleRef, setIsOnAbout }} />
       <div className='main-content'>
-        <Spacer height={40} />
-        <div>
-          <h1 style={boldTextStyle}>Interested in data science?</h1>
-          {/* eslint-disable react/no-unescaped-entities */}
-          <p style={{ fontSize: '1.2em' }}>
-            We'll help you understand the industry and find the job that's right
-            for you.
-          </p>
-        </div>
-        <Spacer height={20} />
-        <SectionDivider />
-
-        <Spacer height={20} />
-        <div>
-          <p ref={locRef} style={sectionHeadingStyle}>
-            Location
-          </p>
-          <div>
-            <h1 style={boldTextStyle}>Where are you located?</h1>
-          </div>
-          <TableauEmbed {...locationVizProps} />
-        </div>
-
-        <Spacer height={40} />
-        <SectionDivider />
-        <Spacer height={20} />
-
-        <div>
-          <div>
-            <p ref={titleRef} style={sectionHeadingStyle}>
-              Job Title
-            </p>
-            <h1 style={boldTextStyle}>
-              What kind of job title can you expect?
-            </h1>
-          </div>
-          <Spacer height={40} />
-          <TableauEmbed {...jobTitleVizProps} />
-        </div>
-        <Spacer height={40} />
-        <SectionDivider />
-        <Spacer height={20} />
-
-        <div>
-          <div>
-            <p ref={remoteRef} style={sectionHeadingStyle}>
-              Remote
-            </p>
-            <h1 style={boldTextStyle}>Is remote work important to you?</h1>
-            <Spacer height={20} />
-          </div>
-        </div>
-
-        <div style={{ marginTop: '20px' }}>
-          <div style={{ marginBottom: '20px' }}>
-            <p style={{ fontSize: '1.2em' }}>Select a filter:</p>
-          </div>
-          <DropdownSelect
-            options={optionsRemotePlot}
-            onChange={(selectedOption: string) => {
-              setRemotePlotType(selectedOption as RemotePlotEnum)
-            }}
-            initValue='Show All Plots'
-          />
-          <Spacer height={20} />
-          <div style={{ marginTop: '40px' }}>{getRemotePlot()}</div>
-        </div>
-
-        <div style={{ marginTop: '60px', marginBottom: '20px' }}>
-          <p
-            style={{
-              fontWeight: 'bold',
-              fontSize: '2em',
-              marginBottom: '20px',
-            }}
-          >
-            Words most commonly mentioned in job descriptions
-          </p>
-        </div>
-        <div style={{ marginTop: '20px' }}>
-          <div style={{ marginBottom: '20px' }}>
-            <p style={{ fontSize: '1.2em' }}>Select a filter:</p>
-          </div>
-          <DropdownSelect
-            options={optionsCloud}
-            onChange={(selectedOption: string) => {
-              setCloudType(selectedOption as WordCloudEnum)
-            }}
-            initValue='Show All Plots'
-          />
-          <div style={{ marginTop: '40px' }}>{getWordCloud()}</div>
-        </div>
-
-        <SectionDivider />
-
-        <div style={{ marginTop: '40px' }}>
-          <p ref={compRef} style={sectionHeadingStyle}>
-            Compensation
-          </p>
-          <h1 style={boldTextStyle}>
-            What kind of compensation can you expect?
-          </h1>
-          <Spacer height={20} />
-        </div>
-        <TableauEmbed {...compensationVizProps} />
-        <Spacer height={40} />
+        {isOnAbout ? <AboutPage /> : VizComponent}
       </div>
     </div>
   )

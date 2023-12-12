@@ -13,7 +13,8 @@ import MenuItem from '@mui/material/MenuItem'
 import DataThresholdingIcon from '@mui/icons-material/DataThresholding'
 import { TooltipOnLoad } from 'views/ToolTipOnLoad'
 
-const pages = ['Location', 'Job Title', 'Remote', 'Compensation']
+const homePages = ['Location', 'Job Title', 'Remote', 'Compensation', 'About']
+const aboutPages = ['Home']
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout']
 
 export interface SectionRef {
@@ -21,9 +22,11 @@ export interface SectionRef {
   locRef: React.RefObject<HTMLDivElement>
   remoteRef: React.RefObject<HTMLDivElement>
   titleRef: React.RefObject<HTMLDivElement>
+  setIsOnAbout: (newState: boolean) => void
 }
 
 export const NavHeader = (refProps: SectionRef) => {
+  const [pages, setPages] = React.useState(homePages)
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
     null,
@@ -38,6 +41,15 @@ export const NavHeader = (refProps: SectionRef) => {
   }
 
   const handleScroll = (page: string) => {
+    if (page === 'About') {
+      refProps.setIsOnAbout(true)
+      setPages(aboutPages)
+      return
+    } else {
+      refProps.setIsOnAbout(false)
+      setPages(homePages)
+    }
+
     let ref
     if (page === 'Compensation') {
       ref = refProps.compRef
@@ -73,7 +85,7 @@ export const NavHeader = (refProps: SectionRef) => {
             variant='h6'
             noWrap
             component='a'
-            href='#app-bar-with-responsive-menu'
+            href='/'
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -120,6 +132,7 @@ export const NavHeader = (refProps: SectionRef) => {
                 <MenuItem
                   key={page}
                   onClick={() => {
+                    refProps.setIsOnAbout(page === 'About')
                     handleScroll(page)
                   }}
                 >
@@ -135,7 +148,7 @@ export const NavHeader = (refProps: SectionRef) => {
             variant='h5'
             noWrap
             component='a'
-            href='#app-bar-with-responsive-menu'
+            href='/'
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
